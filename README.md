@@ -26,7 +26,7 @@ npm install
 The gulpfile contains a series of variables which can be modified to change various aspects of your build. Change the following to suit your project needs.
 
 ```
-var baseUrl = 'https://good-insurance:8890/'; // Local MAMP Development URL for BrowserSync. Change as-needed. 
+var baseUrl = '<%= site_url %>'; // Local Development URL for BrowserSync. Change as-needed. e.g http://website:8888
 // var baseDir = './app'; // Browsersync server base directory when not using proxy url above
 var showScssLint = false; // turn scsslint on or off
 var showJsHint = false; // turn JShint on or off
