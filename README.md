@@ -26,36 +26,42 @@ npm install
 The gulpfile contains a series of variables which can be modified to change various aspects of your build. Change the following to suit your project needs.
 
 ```
-	var baseUrl = 'https://good-insurance:8890/'; // Local MAMP Development URL for BrowserSync. Change as-needed. 
-	// var baseDir = './app'; // Browsersync server base directory when not using proxy url above
-	var showScssLint = false; // turn scsslint on or off
-	var showJsHint = false; // turn JShint on or off
-	var spritesPrefix = "icon-";
+var baseUrl = 'https://good-insurance:8890/'; // Local MAMP Development URL for BrowserSync. Change as-needed. 
+// var baseDir = './app'; // Browsersync server base directory when not using proxy url above
+var showScssLint = false; // turn scsslint on or off
+var showJsHint = false; // turn JShint on or off
+var spritesPrefix = "icon-";
 
-	/*  Style paths
-	    ========================================================================== */
+/*  Style paths
+    ========================================================================== */
 
-	var styleSRC = 'assets/src/scss/**/*.scss'; // Path to main .scss file
-	var styleDist = 'assets/dist/css/'; // Path to place the compiled CSS file
-	var styleWatchFiles = 'assets/src/scss/**/*.scss'; // Path to all *.scss files inside css folders
+var styleSRC = 'assets/src/scss/**/*.scss'; // Path to main .scss file
+var styleDist = 'assets/dist/css/'; // Path to place the compiled CSS file
+var styleWatchFiles = 'assets/src/scss/**/*.scss'; // Path to all *.scss files inside css folders
 
-	/*  JS paths
-	    ========================================================================== */
+/*  JS paths
+    ========================================================================== */
 
-	var jsSRC = 'assets/src/js/main.js'; // Path to main js file
-	var jsDist = 'assets/dist/js/'; // Path to place the compiled js file
-	var jsWatchFiles = 'assets/src/js/**/*.js'; // Path to all js files inside src folder
+var jsSRC = 'assets/src/js/main.js'; // Path to main js file
+var jsDist = 'assets/dist/js/'; // Path to place the compiled js file
+var jsWatchFiles = 'assets/src/js/**/*.js'; // Path to all js files inside src folder
 
-	/*  Images and SVG paths
-	    ========================================================================== */
+/*  Images and SVG paths
+    ========================================================================== */
 
-	var imgSRC = 'assets/src/images/**';
-	var imgDist = 'assets/dist/images/';
-	var svgSRC = 'assets/src/svg-sprites/**';
-	
+var imgSRC = 'assets/src/images/**';
+var imgDist = 'assets/dist/images/';
+var svgSRC = 'assets/src/svg-sprites/**';
+
 ```
 
+##Run 
 
+Once you have made any sort of modifications to the variables. Just run the following and you will be good to go!
+
+```
+gulp
+```
 
 
 
