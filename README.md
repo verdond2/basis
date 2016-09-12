@@ -6,19 +6,19 @@ This is the gulp build system setup used for the majority of projects.
 To get started with the system you must ensure that you have gulp and jshint installed globally. If not you can install them by calling the following in your terminal:
 
 ```
-	npm install -g gulp jshint
+npm install -g gulp jshint
 ```
 
 The next step is to clone this repo into your desired project folder.
 
 ```
-	git clone https://github.com/MurrayCreative/gulp-build-system.git
+git clone https://github.com/MurrayCreative/gulp-build-system.git
 ```
 
 Once the files have been successfully pulled down, run the follwing to install dependenices:
 
 ```
-	npm install
+npm install
 ```
 
 ##Cusomization
