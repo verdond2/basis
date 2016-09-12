@@ -52,6 +52,7 @@ The gulpfile contains a series of variables which can be modified to change vari
 	var imgSRC = 'assets/src/images/**';
 	var imgDist = 'assets/dist/images/';
 	var svgSRC = 'assets/src/svg-sprites/**';
+	
 ```
 
 
