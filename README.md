@@ -9,10 +9,10 @@ To get started with the system you must ensure that you have gulp and jshint ins
 npm install -g gulp jshint
 ```
 
-The next step is to clone this repo into your desired project folder.
+The next step is to clone this repo into your desired project folder. (Note the period after the URL will place the files directly into the cwd without a folder wrapper)
 
 ```
-git clone https://github.com/MurrayCreative/gulp-build-system.git
+git clone https://github.com/MurrayCreative/gulp-build-system.git .
 ```
 
 Once the files have been successfully pulled down, run the follwing to install dependenices:
@@ -23,7 +23,7 @@ npm install
 
 ##Cusomization
 
-The gulpfile contains a series of variables which can be modified to change various aspects of your build. Change the following to suit your project needs.
+The gulpfile contains a series of variables which can be modified to change various aspects of your build. Change the following to suit your project needs. The most important thing to remember to change is the *baseUrl*
 
 ```
 var baseUrl = '<%= site_url %>'; // Local Development URL for BrowserSync. Change as-needed. e.g http://website:8888
@@ -57,7 +57,8 @@ var svgSRC = 'assets/src/svg-sprites/**';
 
 ##Run 
 
-Once you have made any sort of modifications to the variables. Just run the following and you will be good to go!
+Once you have made any sort of modifications to the variables. Please ensure you change the name & description in the package.json file.
+Just run the following and you will be good to go!
 
 ```
 gulp
