@@ -47,7 +47,7 @@ This gulp setup is based on the below folder structure.
 	    └── svg-sprites
 ```
 
-##Cusomization
+##Customization
 
 The gulpfile contains a series of variables which can be modified to change various aspects of your build. The most important thing to remember to change is the *baseUrl*
 
