@@ -9,10 +9,16 @@ To get started with the system you must ensure that you have gulp and jshint ins
 npm install -g gulp jshint
 ```
 
-The next step is to clone this repo into your desired project folder. (Note the period after the URL will place the files directly into the cwd without a folder wrapper)
+The next step is to clone this repo into your desired project folder. (Note the period after the URL will place the files directly into the cwd without a folder wrapper).
 
 ```
-git clone https://github.com/MurrayCreative/gulp-build-system.git .
+git clone https://github.com/MurrayCreative/gulp-build-system.git . 
+```
+
+Pulling down the repo will also pull down a readme, license and also the .git file itself. To remove these files just run the following:
+
+```
+rm -rf .git README.md LICENSE
 ```
 
 Once the files have been successfully pulled down, run the follwing to install dependenices:
@@ -21,9 +27,29 @@ Once the files have been successfully pulled down, run the follwing to install d
 npm install
 ```
 
+##File Structure
+
+This gulp setup is based on the below folder structure. 
+
+```
+├── assets
+│	├── dist
+	│   ├── css
+	│   ├── fonts
+	│   ├── images
+	│   └── js
+│	└── src
+	    ├── bower_components
+	    ├── css
+	    ├── images
+	    ├── js
+	    ├── scss
+	    └── svg-sprites
+```
+
 ##Cusomization
 
-The gulpfile contains a series of variables which can be modified to change various aspects of your build. Change the following to suit your project needs. The most important thing to remember to change is the *baseUrl*
+The gulpfile contains a series of variables which can be modified to change various aspects of your build. The most important thing to remember to change is the *baseUrl*
 
 ```
 var baseUrl = '<%= site_url %>'; // Local Development URL for BrowserSync. Change as-needed. e.g http://website:8888
