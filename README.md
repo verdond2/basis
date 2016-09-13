@@ -45,6 +45,8 @@ This gulp setup is based on the below folder structure.
 	    ├── js
 	    ├── scss
 	    └── svg-sprites
+gulpfile.js
+package.json
 ```
 
 ##Customization
