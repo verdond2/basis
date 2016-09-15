@@ -1,7 +1,7 @@
 {
-  "name": "<%= project_name %>",
+  "name": "Gulp Build System",
   "version": "1.0.0",
-  "description": "<%= project_desc %>",
+  "description": "Gulp Build System",
   "main": "gulpfile.js",
   "dependencies": {},
   "devDependencies": {
@@ -27,9 +27,6 @@
     "gulp-util": "^3.0.7",
     "jshint": "^2.9.2",
     "path": "^0.12.7"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Murray Creative",
   "license": "MIT"
