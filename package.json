@@ -1,5 +1,5 @@
 {
-  "name": "Gulp Build System",
+  "name": "gulp-build-system",
   "version": "1.0.0",
   "description": "Gulp Build System",
   "main": "gulpfile.js",
