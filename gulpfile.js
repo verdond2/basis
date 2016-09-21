@@ -2,8 +2,8 @@
     1. Setup Path Varaibles
     ========================================================================== */
 
-	var baseUrl = '<%= proxy_url %>'; // Local MAMP Development URL for BrowserSync. Change as-needed. 
-	// var baseDir = './app'; // Browsersync server base directory when not using proxy url above
+	// var baseUrl = '<%= proxy_url %>'; // Local MAMP Development URL for BrowserSync. Change as-needed. 
+	var baseDir = './'; // Browsersync server base directory when not using proxy url above
 	var showScssLint = false; // turn scsslint on or off
 	var showJsHint = true; // turn JShint on or off
 	var spritesPrefix = "icon-";
@@ -64,19 +64,19 @@
     ========================================================================== */
 
 	gulp.task('styles', function () {
-	  return gulp.src('assets/src/scss/**/*.scss')
-	  .pipe(plumber({ errorHandler: reportError }))
-	  .pipe(gulpif(showScssLint, scsslint({ customReport: scssLintStylish })))
-	    .pipe(sourcemaps.init()) // generate sourcemaps
-	    .pipe(sass()) // start sass process
-	    .pipe(autoprefixer({ browsers: ['last 3 versions'] }))
-	    .pipe(gulp.dest(styleDist)) // copy *.css into destination
-	    .pipe(cleanCSS()) // clean and minify *.css
-	    .pipe(rename({ extname: '.min.css' })) // rename *.css to *.min.css
-	    .pipe(sourcemaps.write())
-	    .pipe(gulp.dest(styleDist)) // copy *.min.css to destination
-	    .pipe(notify({ title: "Styles Task", message: "Styles compiled successfully.", onLast: true }))
-	    .pipe(browserSync.stream({match: '**/*.css'}));
+		return gulp.src('assets/src/scss/**/*.scss')
+			.pipe(plumber({ errorHandler: reportError }))
+			.pipe(gulpif(showScssLint, scsslint({ customReport: scssLintStylish })))
+			.pipe(sourcemaps.init()) // generate sourcemaps
+			.pipe(sass()) // start sass process
+			.pipe(autoprefixer({ browsers: ['last 3 versions'] }))
+			.pipe(gulp.dest(styleDist)) // copy *.css into destination
+			.pipe(cleanCSS()) // clean and minify *.css
+			.pipe(rename({ extname: '.min.css' })) // rename *.css to *.min.css
+			.pipe(sourcemaps.write())
+			.pipe(gulp.dest(styleDist)) // copy *.min.css to destination
+			.pipe(notify({ title: "Styles Task", message: "Styles compiled successfully.", onLast: true }))
+			.pipe(browserSync.stream());
 	});
 
 /*  ==========================================================================
@@ -84,16 +84,15 @@
     ========================================================================== */
 
 	gulp.task("scripts", function() {
-
-	    return gulp.src(jsSRC)
-	        .pipe(plumber({ errorHandler: reportError }))
-	        .pipe(include())
-	        .pipe(gulpif(showJsHint, jshint()))
-	        .pipe(gulpif(showJsHint, jshint.reporter('jshint-stylish')))
-	        .pipe(uglify())
-	        .pipe(rename({ suffix: '.min' }))
-	        .pipe(gulp.dest(jsDist))
-	        .pipe(notify({ title: "Scripts Task", message: "Scripts compiled successfully.", onLast: true }));
+		return gulp.src(jsSRC)
+			.pipe(plumber({ errorHandler: reportError }))
+			.pipe(include())
+			.pipe(gulpif(showJsHint, jshint()))
+			.pipe(gulpif(showJsHint, jshint.reporter('jshint-stylish')))
+			.pipe(uglify())
+			.pipe(rename({ suffix: '.min' }))
+			.pipe(gulp.dest(jsDist))
+			.pipe(notify({ title: "Scripts Task", message: "Scripts compiled successfully.", onLast: true }));
 	});
 
 	// create a task that ensures the `js` task is complete before reloading browsers
@@ -149,11 +148,12 @@
 
 	gulp.task('browserSync', function() {
 	    browserSync.init({
-	        // server: {
-	        //     baseDir: baseDir
-	        // }
-	        // Read here http://www.browsersync.io/docs/options/
-	        proxy: baseUrl,
+	    	server: true,
+	        server: {
+	            baseDir: baseDir
+	        },
+	        port: 3000,
+	        // proxy: baseUrl,
 	        notify: {
 	            styles: {
 	                top: 'auto',
@@ -163,11 +163,6 @@
 	                backgroundColor: '#fdb814'
 	            }
 	        }
-	        // Inject CSS changes
-	        // injectChanges: true
-	    	// watchOptions: {
-		   	// 		debounceDelay: 1000    // Wait one second before refreshing.
-		   	// }
 	    })
 	});
 
@@ -229,7 +224,8 @@
 	    gulp.watch(jsWatchFiles, ['js-watch']);
 	    gulp.watch(imgSRC, ['images']);
 	    gulp.watch(svgSRC, ['svgsprites']);
-	    gulp.watch(['**/*.html', '**/*.php']).on('change', browserSync.reload);
+	    gulp.watch("*.html").on("change", browserSync.reload);
+	   	gulp.watch("*.php").on("change", browserSync.reload);
 	});
 
 

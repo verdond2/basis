@@ -1,3 +1,1318 @@
-/*! normalize.css v3.0.2 | MIT License | git.io/normalize */html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}h1{font-size:2em;margin:0.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace, monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{height:auto}input[type="search"]{-webkit-appearance:textfield;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:0.35em 0.625em 0.75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:bold}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}::-moz-selection{background:#b3d4fc;text-shadow:none}::selection{background:#da1c23;text-shadow:none}audio,canvas,iframe,img,svg,video{vertical-align:middle}.browserupgrade{margin:0.2em 0;background:#ccc;color:#000;padding:0.2em 0}img,picture{margin:0;max-width:100%}img{vertical-align:middle;border:0;-ms-interpolation-mode:bicubic;image-rendering:optimizeQuality}@font-face{font-family:open_sansregular;font-style:normal;font-weight:400;src:url("../fonts/opensans-regular-webfont.eot?#iefix") format("embedded-opentype"),url("../fonts/opensans-regular-webfont.woff2") format("woff2"),url("../fonts/opensans-regular-webfont.woff") format("woff"),url("../fonts/opensans-regular-webfont.ttf") format("truetype"),url("../fonts/opensans-regular-webfont.svg#open_sansregular") format("svg")}@font-face{font-family:open_sansbold;font-style:normal;font-weight:700;src:url("../fonts/opensans-bold-webfont.eot?#iefix") format("embedded-opentype"),url("../fonts/opensans-bold-webfont.woff2") format("woff2"),url("../fonts/opensans-bold-webfont.woff") format("woff"),url("../fonts/opensans-bold-webfont.ttf") format("truetype"),url("../fonts/opensans-bold-webfont.svg#open_sansbold") format("svg")}@font-face{font-family:open_sansitalic;font-style:italic;font-weight:700;src:url("../fonts/opensans-italic-webfont.eot?#iefix") format("embedded-opentype"),url("../fonts/opensans-italic-webfont.woff2") format("woff2"),url("../fonts/opensans-italic-webfont.woff") format("woff"),url("../fonts/opensans-italic-webfont.ttf") format("truetype"),url("../fonts/opensans-italic-webfont.svg#open_sansitalic") format("svg")}.open-sans-regular,body,input,label,select,textarea,input[type="color"],input[type="date"],input[type="datetime"],input[type="datetime-local"],input[type="email"],input[type="month"],input[type="number"],input[type="password"],input[type="search"],input[type="tel"],input[type="text"],input[type="time"],input[type="url"],input[type="week"],select[multiple=multiple]{font-family:"open_sansregular","HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;font-weight:400;font-style:normal}.open-sans-italic,em{font-family:"open_sansitalic","HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;font-weight:400;font-style:italic}.open-sans-bold,strong,p.bold{font-family:"open_sansbold","HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;font-weight:700;font-style:normal}html{font-size:62.5%}body{-webkit-font-feature-settings:"kern","liga","frac","pnum";-moz-font-feature-settings:"kern","liga","frac","pnum";-ms-font-feature-settings:"kern","liga","frac","pnum";font-feature-settings:"kern","liga","frac","pnum";-webkit-font-smoothing:antialiased;background-color:#fff;color:#353c40;font-size:14px;font-size:1.4rem;line-height:1.5}h1,h2,h3,h4,h5,h6{line-height:1.25}h1{font-size:37px;font-size:3.7rem}h2{font-size:23px;font-size:2.3rem}h3{font-size:18px;font-size:1.8rem}h4{font-size:16px;font-size:1.6rem}h5{font-size:16px;font-size:1.6rem}h6{font-size:14px;font-size:1.4rem}p{margin:0 0 0.75rem}a{color:#da1c23;text-decoration:none}a:hover{color:#961318}a:active,a:focus{color:#961318;outline:none}hr{display:block;height:1px;border:0;border-top:1px solid 1px solid #e8e8e8;margin:1.5rem 0;padding:0}blockquote{border-left:2px solid #e8e8e8;color:#58636a;margin:1.5rem 0;padding-left:0.75rem}cite{color:#6f7d86;font-style:italic}cite:before{content:"\2014 \00A0"}fieldset{background:#fff;border:1px solid #e8e8e8;margin:0 0 0.75rem 0;padding:1.5rem}input,label,select{display:block;font-size:14px;font-size:1.4rem}label{font-weight:bold;margin-bottom:0.375rem}label.required:after{content:"*"}label abbr{display:none}textarea,input[type="color"],input[type="date"],input[type="datetime"],input[type="datetime-local"],input[type="email"],input[type="month"],input[type="number"],input[type="password"],input[type="search"],input[type="tel"],input[type="text"],input[type="time"],input[type="url"],input[type="week"],textarea,select[multiple=multiple]{-webkit-transition:border-color;transition:border-color;background-color:white;border-radius:3px;border:1px solid #e8e8e8;box-shadow:inset 0 1px 3px rgba(0,0,0,0.06);font-size:14px;font-size:1.4rem;margin-bottom:0.75rem;padding:0.5rem 0.5rem;width:100%}textarea:hover,input[type="color"]:hover,input[type="date"]:hover,input[type="datetime"]:hover,input[type="datetime-local"]:hover,input[type="email"]:hover,input[type="month"]:hover,input[type="number"]:hover,input[type="password"]:hover,input[type="search"]:hover,input[type="tel"]:hover,input[type="text"]:hover,input[type="time"]:hover,input[type="url"]:hover,input[type="week"]:hover,textarea:hover,select[multiple=multiple]:hover{border-color:#cfcfcf}textarea:focus,input[type="color"]:focus,input[type="date"]:focus,input[type="datetime"]:focus,input[type="datetime-local"]:focus,input[type="email"]:focus,input[type="month"]:focus,input[type="number"]:focus,input[type="password"]:focus,input[type="search"]:focus,input[type="tel"]:focus,input[type="text"]:focus,input[type="time"]:focus,input[type="url"]:focus,input[type="week"]:focus,textarea:focus,select[multiple=multiple]:focus{border-color:#da1c23;box-shadow:inset 0 1px 3px rgba(0,0,0,0.06),0 0 5px rgba(195,25,31,0.7);outline:none}textarea{resize:vertical}input[type="search"]{-webkit-appearance:none;-moz-appearance:none;-ms-appearance:none;-o-appearance:none;appearance:none}input[type="checkbox"],input[type="radio"]{display:inline;margin-right:0.375rem}input[type="file"]{padding-bottom:0.75rem;width:100%}select{margin-bottom:1.5rem;max-width:100%;width:auto}table{-webkit-font-feature-settings:"kern","liga","tnum";-moz-font-feature-settings:"kern","liga","tnum";-ms-font-feature-settings:"kern","liga","tnum";font-feature-settings:"kern","liga","tnum";border-collapse:collapse;margin:0.75rem 0;table-layout:fixed;width:100%}th{border-bottom:1px solid #c2c2c2;font-weight:bold;padding:0.75rem 0;text-align:left}td{border-bottom:1px solid #e8e8e8;padding:0.75rem 0}tr,td,th{vertical-align:middle}table th{font-weight:bold}table td,table th{padding:9px 10px;text-align:left}@media only screen and (max-width: 767px){table.responsive{margin-bottom:0}.pinned{position:absolute;left:0;top:0;background:#fff;width:35%;overflow:hidden;overflow-x:scroll;border-right:1px solid #ccc;border-left:1px solid #ccc}.pinned table{border-right:none;border-left:none;width:100%}.pinned table th,.pinned table td{white-space:nowrap}.pinned td:last-child{border-bottom:0}div.table-wrapper{position:relative;margin-bottom:20px;overflow:hidden;border-right:1px solid #ccc;border-top:1px solid #ccc}div.table-wrapper div.scrollable table{margin-left:35%}div.table-wrapper div.scrollable{overflow:scroll;overflow-y:hidden}table.responsive td,table.responsive th{position:relative;white-space:nowrap;overflow:hidden}table.responsive th:first-child,table.responsive td:first-child,table.responsive td:first-child,table.responsive.pinned td{display:none}}.hidden{display:none !important;visibility:hidden}.visuallyhidden{border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.visuallyhidden.focusable:active,.visuallyhidden.focusable:focus{clip:auto;height:auto;margin:0;overflow:visible;position:static;width:auto}.invisible{visibility:hidden}.clearfix:before,.clearfix:after{content:" ";display:table}.clearfix:after{clear:both}@media print{*,*:before,*:after{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a,a:visited{text-decoration:underline}a[href]:after{content:" (" attr(href) ")"}abbr[title]:after{content:" (" attr(title) ")"}a[href^="#"]:after,a[href^="javascript:"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}p,h2,h3{orphans:3;widows:3}h2,h3{page-break-after:avoid}}.mm-hidden{display:none !important}.mm-wrapper{overflow-x:hidden;position:relative}.mm-menu,.mm-menu>.mm-panel{margin:0;position:absolute;left:0;right:0;top:0;bottom:0;z-index:0}.mm-menu{background:inherit;display:block;overflow:hidden;padding:0}.mm-panel{-webkit-transition:-webkit-transform 0.4s ease;transition:transform 0.4s ease;-webkit-transform:translate3d(100%, 0, 0);-ms-transform:translate3d(100%, 0, 0);transform:translate3d(100%, 0, 0)}.mm-panel.mm-opened{-webkit-transform:translate3d(0%, 0, 0);-ms-transform:translate3d(0%, 0, 0);transform:translate3d(0%, 0, 0)}.mm-panel.mm-subopened{-webkit-transform:translate3d(-30%, 0, 0);-ms-transform:translate3d(-30%, 0, 0);transform:translate3d(-30%, 0, 0)}.mm-panel.mm-highest{z-index:1}.mm-menu>.mm-panel{background:inherit;-webkit-overflow-scrolling:touch;overflow:scroll;overflow-x:hidden;overflow-y:auto;box-sizing:border-box;padding:0 20px}.mm-menu>.mm-panel.mm-hasnavbar{padding-top:40px}.mm-menu>.mm-panel:before,.mm-menu>.mm-panel:after{content:'';display:block;height:20px}.mm-vertical .mm-panel{-webkit-transform:none !important;-ms-transform:none !important;transform:none !important}.mm-vertical .mm-listview .mm-panel,.mm-listview .mm-vertical .mm-panel{display:none;padding:10px 0 10px 10px}.mm-vertical .mm-listview .mm-panel .mm-listview>li:last-child:after,.mm-listview .mm-vertical .mm-panel .mm-listview>li:last-child:after{border-color:transparent}.mm-vertical li.mm-opened>.mm-panel,li.mm-vertical.mm-opened>.mm-panel{display:block}.mm-vertical .mm-listview>li>.mm-next,.mm-listview>li.mm-vertical>.mm-next{height:40px;bottom:auto}.mm-vertical .mm-listview>li>.mm-next:after,.mm-listview>li.mm-vertical>.mm-next:after{top:16px;bottom:auto}.mm-vertical .mm-listview>li.mm-opened>.mm-next:after,.mm-listview>li.mm-vertical.mm-opened>.mm-next:after{-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);transform:rotate(45deg)}.mm-navbar{border-bottom:1px solid transparent;text-align:center;line-height:20px;height:40px;padding:0 40px;margin:0;position:absolute;top:0;left:0;right:0}.mm-navbar>*{display:block;padding:10px 0}.mm-navbar a,.mm-navbar a:hover{text-decoration:none}.mm-navbar .mm-title{text-overflow:ellipsis;white-space:nowrap;overflow:hidden}.mm-navbar .mm-btn{box-sizing:border-box;width:40px;height:40px;position:absolute;top:0;z-index:1}.mm-navbar .mm-btn:first-child{padding-left:20px;left:0}.mm-navbar .mm-btn:last-child{padding-right:20px;right:0}.mm-panel .mm-navbar{display:none}.mm-panel.mm-hasnavbar .mm-navbar{display:block}.mm-listview,.mm-listview>li{list-style:none;display:block;padding:0;margin:0}.mm-listview{font:inherit;font-size:14px}.mm-listview a,.mm-listview a:hover{text-decoration:none}.mm-listview>li{position:relative}.mm-listview>li>a,.mm-listview>li>span{text-overflow:ellipsis;white-space:nowrap;overflow:hidden;color:inherit;line-height:20px;display:block;padding:10px 10px 10px 20px;margin:0}.mm-listview>li>a.mm-arrow,.mm-listview>li>span.mm-arrow{padding-right:50px}.mm-listview>li:not(.mm-divider):after{content:'';border-bottom-width:1px;border-bottom-style:solid;display:block;position:absolute;left:0;right:0;bottom:0}.mm-listview>li:not(.mm-divider):after{left:20px}.mm-listview .mm-next{background:rgba(3,2,1,0);width:50px;padding:0;position:absolute;right:0;top:0;bottom:0;z-index:2}.mm-listview .mm-next:before{content:'';border-left-width:1px;border-left-style:solid;display:block;position:absolute;top:0;bottom:0;left:0}.mm-listview .mm-next+a,.mm-listview .mm-next+span{margin-right:50px}.mm-listview .mm-next.mm-fullsubopen{width:100%}.mm-listview .mm-next.mm-fullsubopen:before{border-left:none}.mm-listview .mm-next.mm-fullsubopen+a,.mm-listview .mm-next.mm-fullsubopen+span{padding-right:50px;margin-right:0}.mm-menu>.mm-panel>.mm-listview{margin-left:-20px;margin-right:-20px}.mm-menu>.mm-panel>.mm-listview.mm-first{margin-top:-20px}.mm-menu>.mm-panel>.mm-listview.mm-last{padding-bottom:20px}.mm-prev:before,.mm-next:after,.mm-arrow:after{content:'';border:2px solid transparent;display:inline-block;width:8px;height:8px;margin:auto;position:absolute;top:0;bottom:0;-webkit-transform:rotate(-45deg);-ms-transform:rotate(-45deg);transform:rotate(-45deg)}.mm-prev:before{border-right:none;border-bottom:none;left:20px}.mm-next:after,.mm-arrow:after{border-top:none;border-left:none;right:20px}.mm-divider{text-overflow:ellipsis;white-space:nowrap;overflow:hidden;font-size:10px;text-transform:uppercase;text-indent:20px;line-height:25px}.mm-listview>li.mm-spacer{padding-top:40px}.mm-listview>li.mm-spacer>.mm-next{top:40px}.mm-listview>li.mm-spacer.mm-divider{padding-top:25px}.mm-menu{background:#f3f3f3;color:rgba(0,0,0,0.7)}.mm-menu .mm-navbar{border-color:rgba(0,0,0,0.1)}.mm-menu .mm-navbar>*,.mm-menu .mm-navbar a{color:rgba(0,0,0,0.3)}.mm-menu .mm-navbar .mm-btn:before,.mm-menu .mm-navbar .mm-btn:after{border-color:rgba(0,0,0,0.3)}.mm-menu .mm-listview>li:after{border-color:rgba(0,0,0,0.1)}.mm-menu .mm-listview>li .mm-prev:before,.mm-menu .mm-listview>li .mm-next:after,.mm-menu .mm-listview>li .mm-arrow:after{border-color:rgba(0,0,0,0.3)}.mm-menu .mm-listview>li .mm-prev:after,.mm-menu .mm-listview>li .mm-next:before{border-color:rgba(0,0,0,0.1)}.mm-menu .mm-listview>li.mm-selected>a:not(.mm-next),.mm-menu .mm-listview>li.mm-selected>span{background:rgba(255,255,255,0.5)}.mm-menu.mm-vertical .mm-listview li.mm-opened>a.mm-next,.mm-menu.mm-vertical .mm-listview li.mm-opened>.mm-panel,.mm-menu .mm-listview li.mm-opened.mm-vertical>a.mm-next,.mm-menu .mm-listview li.mm-opened.mm-vertical>.mm-panel{background:rgba(0,0,0,0.05)}.mm-menu .mm-divider{background:rgba(0,0,0,0.05)}.mm-page{box-sizing:border-box;position:relative}.mm-slideout{-webkit-transition:-webkit-transform 0.4s ease;transition:transform 0.4s ease}html.mm-opened{overflow:hidden;position:relative}html.mm-opened body{overflow:hidden}html.mm-background .mm-page{background:inherit}#mm-blocker{background:rgba(3,2,1,0);display:none;width:100%;height:100%;position:fixed;top:0;left:0;z-index:999999}html.mm-opened #mm-blocker,html.mm-blocking #mm-blocker{display:block}.mm-menu.mm-offcanvas{display:none;position:fixed}.mm-menu.mm-current{display:block}.mm-menu{width:80%;min-width:140px;max-width:440px}html.mm-opening .mm-slideout{-webkit-transform:translate(80%, 0);-ms-transform:translate(80%, 0);transform:translate(80%, 0)}@media all and (max-width: 175px){html.mm-opening .mm-slideout{-webkit-transform:translate(140px, 0);-ms-transform:translate(140px, 0);transform:translate(140px, 0)}}@media all and (min-width: 550px){html.mm-opening .mm-slideout{-webkit-transform:translate(440px, 0);-ms-transform:translate(440px, 0);transform:translate(440px, 0)}}
+@charset "UTF-8";
+/*  ==========================================================================
+    ==========================================================================
 
-/*# sourceMappingURL=main.css.map */
+    Main
+    1. Bower Components
+    2. Helpers
+    3. Base
+    4. Components
+    5. Layout
+    6. Pages
+    7. Vendor
+    8. Shame
+
+    CSS FORMATTING
+    1. Positioning
+    2. Display & Box Model
+    3. Text
+    4. Other
+
+    ==========================================================================
+    ========================================================================== */
+/*  ========================================================================== 
+	1. Bower Components
+    ========================================================================== */
+/*  Normalize
+	========================================================================== */
+/*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
+/**
+ * 1. Change the default font family in all browsers (opinionated).
+ * 2. Correct the line height in all browsers.
+ * 3. Prevent adjustments of font size after orientation changes in IE and iOS.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  line-height: 1.15;
+  /* 2 */
+  -ms-text-size-adjust: 100%;
+  /* 3 */
+  -webkit-text-size-adjust: 100%;
+  /* 3 */ }
+
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
+body {
+  margin: 0; }
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ * 2. Add the correct display in IE.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+  /* 1 */
+  display: block; }
+
+/**
+ * Add the correct display in IE 9-.
+ */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block; }
+
+/**
+ * Add the correct display in iOS 4-7.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline; }
+
+/**
+ * Add the correct display in IE 10-.
+ * 1. Add the correct display in IE.
+ */
+template,
+[hidden] {
+  display: none; }
+
+/* Links
+   ========================================================================== */
+/**
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+a {
+  background-color: transparent;
+  /* 1 */
+  -webkit-text-decoration-skip: objects;
+  /* 2 */ }
+
+/**
+ * Remove the outline on focused links when they are also active or hovered
+ * in all browsers (opinionated).
+ */
+a:active,
+a:hover {
+  outline-width: 0; }
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * 1. Remove the bottom border in Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */ }
+
+/**
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ */
+b,
+strong {
+  font-weight: inherit; }
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder; }
+
+/**
+ * Add the correct font style in Android 4.3-.
+ */
+dfn {
+  font-style: italic; }
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/**
+ * Add the correct background and color in IE 9-.
+ */
+mark {
+  background-color: #ff0;
+  color: #000; }
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sub {
+  bottom: -0.25em; }
+
+sup {
+  top: -0.5em; }
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+img {
+  border-style: none; }
+
+/**
+ * Hide the overflow in IE.
+ */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/**
+ * Add the correct margin in IE 8.
+ */
+figure {
+  margin: 1em 40px; }
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */ }
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change font properties to `inherit` in all browsers (opinionated).
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font: inherit;
+  /* 1 */
+  margin: 0;
+  /* 2 */ }
+
+/**
+ * Restore the font weight unset by the previous rule.
+ */
+optgroup {
+  font-weight: bold; }
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible; }
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none; }
+
+/**
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */ }
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0; }
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText; }
+
+/**
+ * Change the border, margin, and padding in all browsers (opinionated).
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */ }
+
+/**
+ * Remove the default vertical scrollbar in IE.
+ */
+textarea {
+  overflow: auto; }
+
+/**
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
+ */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */ }
+
+/**
+ * Remove the inner padding and cancel buttons in Chrome and Safari on OS X.
+ */
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * Correct the text style of placeholders in Chrome, Edge, and Safari.
+ */
+::-webkit-input-placeholder {
+  color: inherit;
+  opacity: 0.54; }
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */ }
+
+/*  Jeet
+	========================================================================== */
+/*  Breakpoint SASS
+	========================================================================== */
+/*  Bourbon
+	========================================================================== */
+/*  Outdated Browser
+	========================================================================== */
+/*!--------------------------------------------------------------------
+STYLES "Outdated Browser"
+Version:    1.1.2 - 2015
+author:     Burocratik
+website:    http://www.burocratik.com
+* @preserve
+-----------------------------------------------------------------------*/
+#outdated {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 170px;
+  text-align: center;
+  text-transform: uppercase;
+  z-index: 1500;
+  background-color: #f25648;
+  color: #ffffff; }
+  #outdated h6 {
+    font-size: 25px;
+    line-height: 25px;
+    margin: 30px 0 10px; }
+  #outdated p {
+    font-size: 12px;
+    line-height: 12px;
+    margin: 0; }
+  #outdated #btnUpdateBrowser {
+    display: block;
+    position: relative;
+    padding: 10px 20px;
+    margin: 30px auto 0;
+    width: 230px;
+    /*need for IE*/
+    color: #ffffff;
+    text-decoration: none;
+    border: 2px solid #ffffff;
+    cursor: pointer; }
+    #outdated #btnUpdateBrowser:hover {
+      color: #f25648;
+      background-color: #ffffff; }
+  #outdated .last {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    width: 20px;
+    height: 20px; }
+    #outdated .last[dir='rtl'] {
+      right: auto !important;
+      left: 25px !important; }
+  #outdated #btnCloseUpdateBrowser {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 36px;
+    line-height: 36px; }
+  * html #outdated {
+    position: absolute; }
+
+/*  ==========================================================================
+	2. Helpers 
+	========================================================================== */
+/*  ==========================================================================
+    ==========================================================================
+
+    Variables
+    1. Typography
+    2. Colours
+    3. Breakpoints
+
+    CSS FORMATTING
+    1. Positioning
+    2. Display & Box Model
+    3. Text
+    4. Other
+
+    ==========================================================================
+    ========================================================================== */
+/*  ========================================================================== 
+	1. Typography
+    ========================================================================== */
+/*  Fallback Stack
+	========================================================================== */
+/*  Font Sizes
+	========================================================================== */
+/*  Line Heights
+	========================================================================== */
+/*  Other Sizes
+	========================================================================== */
+/*  ==========================================================================
+	2. Colours 
+	========================================================================== */
+/*  Brand Colours 
+	========================================================================== */
+/*  Dark Colours
+	========================================================================== */
+/*  Light Colours
+	========================================================================== */
+/*  Text Colours
+	========================================================================== */
+/*  Background Colours
+	========================================================================== */
+/*  Font Colours
+	========================================================================== */
+/*  Anchor Colours
+	========================================================================== */
+/*  Border Colours
+	========================================================================== */
+/*  Form Colours
+	========================================================================== */
+/*  Misc Colours
+	========================================================================== */
+/*  ==========================================================================
+	3. Breakpoints 
+	========================================================================== */
+/*  Desktop
+	========================================================================== */
+/*  Mobile / Tablet
+	========================================================================== */
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+/*
+ * Hide visually and from screen readers:
+ * http://juicystudio.com/article/screen-readers-display-none.php
+ */
+.hidden {
+  display: none !important;
+  visibility: hidden; }
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto; }
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+.invisible {
+  visibility: hidden; }
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */ }
+
+.clearfix:after {
+  clear: both; }
+
+/*  ==========================================================================
+	3. Base 
+	========================================================================== */
+/*  ==========================================================================
+    ==========================================================================
+
+    General
+    1. Base Styles 
+    2. Browser Upgrade Prompt 
+    3. Images
+
+    CSS FORMATTING
+    1. Positioning
+    2. Display & Box Model
+    3. Text
+    4. Other
+
+    ==========================================================================
+    ========================================================================== */
+/*
+    * What follows is the result of much research on cross-browser styling.
+    * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+    * Kroc Camen, and the H5BP dev community and team.
+*/
+/*  ========================================================================== 
+    1. Base Styles opinionated defaults 
+    ========================================================================== */
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+/*
+    * Remove text-shadow in selection highlight:
+    * https://twitter.com/miketaylr/status/12228805301
+    *
+    * These selection rule sets have to be separate.
+    * Customize the background color to match your design.
+ */
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none; }
+
+::selection {
+  background: #da1c23;
+  text-shadow: none; }
+
+/*
+    * Remove the gap between audio, canvas, iframes,
+    * images, videos and the bottom of their containers:
+    * https://github.com/h5bp/html5-boilerplate/issues/440
+*/
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle; }
+
+/*  ==========================================================================
+    2. Browser Upgrade Prompt 
+    ========================================================================== */
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0; }
+
+/*  ==========================================================================
+    3. Images
+    ========================================================================== */
+img,
+picture {
+  margin: 0;
+  max-width: 100%; }
+
+img {
+  vertical-align: middle;
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+  image-rendering: optimizeQuality; }
+
+/*  ==========================================================================
+    ==========================================================================
+
+    Typography
+    1. Font Definitions
+    2. General Fonts
+
+    CSS FORMATTING
+    1. Positioning
+    2. Display & Box Model
+    3. Text
+    4. Other
+
+    ==========================================================================
+    ========================================================================== */
+/*  ========================================================================== 
+    1. Font Definitions
+    ========================================================================== */
+@font-face {
+  font-family: open_sansregular;
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/opensans-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/opensans-regular-webfont.woff2") format("woff2"), url("../fonts/opensans-regular-webfont.woff") format("woff"), url("../fonts/opensans-regular-webfont.ttf") format("truetype"), url("../fonts/opensans-regular-webfont.svg#open_sansregular") format("svg"); }
+
+@font-face {
+  font-family: open_sansbold;
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/opensans-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/opensans-bold-webfont.woff2") format("woff2"), url("../fonts/opensans-bold-webfont.woff") format("woff"), url("../fonts/opensans-bold-webfont.ttf") format("truetype"), url("../fonts/opensans-bold-webfont.svg#open_sansbold") format("svg"); }
+
+@font-face {
+  font-family: open_sansitalic;
+  font-style: italic;
+  font-weight: 700;
+  src: url("../fonts/opensans-italic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/opensans-italic-webfont.woff2") format("woff2"), url("../fonts/opensans-italic-webfont.woff") format("woff"), url("../fonts/opensans-italic-webfont.ttf") format("truetype"), url("../fonts/opensans-italic-webfont.svg#open_sansitalic") format("svg"); }
+
+/*  Open Sans Regular
+    ========================================================================== */
+.sans-regular, body, input,
+label,
+select, textarea,
+input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"], input:not([type]),
+select[multiple=multiple] {
+  font-family: "open_sansregular", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 400;
+  font-style: normal; }
+
+/*  Open Sans Italic
+    ========================================================================== */
+.sans-italic, em {
+  font-family: "open_sansitalic", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 400;
+  font-style: italic; }
+
+/*  Open Sans Bold
+    ========================================================================== */
+.sans-bold, strong,
+p.bold {
+  font-family: "open_sansbold", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 700;
+  font-style: normal; }
+
+/*  ==========================================================================
+    2. General Fonts 
+    ========================================================================== */
+/*  HTML & BODY
+    ========================================================================== */
+html {
+  font-size: 62.5%; }
+
+body {
+  -ms-font-feature-settings: "kern", "liga", "frac", "pnum";
+  font-feature-settings: "kern", "liga", "frac", "pnum";
+  -webkit-font-smoothing: antialiased;
+  background-color: #ffffff;
+  color: #353c40;
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 1.5; }
+
+/*  Titles
+    ========================================================================== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.25; }
+
+h1 {
+  font-size: 37px;
+  font-size: 3.7rem; }
+
+h2 {
+  font-size: 23px;
+  font-size: 2.3rem; }
+
+h3 {
+  font-size: 18px;
+  font-size: 1.8rem; }
+
+h4 {
+  font-size: 16px;
+  font-size: 1.6rem; }
+
+h5 {
+  font-size: 16px;
+  font-size: 1.6rem; }
+
+h6 {
+  font-size: 14px;
+  font-size: 1.4rem; }
+
+/*  Body Copy, Anchors, Quotes etc
+    ========================================================================== */
+p {
+  margin: 0 0 0.75rem; }
+
+a {
+  color: #da1c23;
+  text-decoration: none; }
+  a:hover {
+    color: #961318; }
+  a:active, a:focus {
+    color: #961318;
+    outline: none; }
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid 1px solid #e8e8e8;
+  margin: 1.5rem 0;
+  padding: 0; }
+
+blockquote {
+  border-left: 2px solid #e8e8e8;
+  color: #58636a;
+  margin: 1.5rem 0;
+  padding-left: 0.75rem; }
+
+cite {
+  color: #6f7d86;
+  font-style: italic; }
+  cite:before {
+    content: "\2014 \00A0"; }
+
+/*  ==========================================================================
+	4. Components 
+	========================================================================== */
+/*  ==========================================================================
+    ==========================================================================
+
+    Forms
+    1. Standard Fields
+
+    CSS FORMATTING
+    1. Positioning
+    2. Display & Box Model
+    3. Text
+    4. Other
+
+    ==========================================================================
+    ========================================================================== */
+/*  ========================================================================== 
+    1. Standard Fields
+    ========================================================================== */
+/*  Fieldset
+    ========================================================================== */
+fieldset {
+  background: white;
+  border: 1px solid #e8e8e8;
+  margin: 0 0 0.75rem 0;
+  padding: 1.5rem; }
+
+/*  Common 
+    ========================================================================== */
+input,
+label,
+select {
+  display: block;
+  font-size: 14px;
+  font-size: 1.4rem; }
+
+/*  Label
+    ========================================================================== */
+label {
+  font-weight: bold;
+  margin-bottom: 0.375rem; }
+  label.required:after {
+    content: "*"; }
+  label abbr {
+    display: none; }
+
+/*  Textarea / Select
+    ========================================================================== */
+textarea,
+input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"], input:not([type]), textarea,
+select[multiple=multiple] {
+  transition: border-color;
+  background-color: white;
+  border-radius: 3px;
+  border: 1px solid #e8e8e8;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
+  font-size: 14px;
+  font-size: 1.4rem;
+  margin-bottom: 0.75rem;
+  padding: 0.5rem 0.5rem;
+  width: 100%; }
+  textarea:hover,
+  input[type="color"]:hover, input[type="date"]:hover, input[type="datetime"]:hover, input[type="datetime-local"]:hover, input[type="email"]:hover, input[type="month"]:hover, input[type="number"]:hover, input[type="password"]:hover, input[type="search"]:hover, input[type="tel"]:hover, input[type="text"]:hover, input[type="time"]:hover, input[type="url"]:hover, input[type="week"]:hover, input:not([type]):hover, textarea:hover,
+  select[multiple=multiple]:hover {
+    border-color: #cfcfcf; }
+  textarea:focus,
+  input[type="color"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="email"]:focus, input[type="month"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="time"]:focus, input[type="url"]:focus, input[type="week"]:focus, input:not([type]):focus, textarea:focus,
+  select[multiple=multiple]:focus {
+    border-color: #da1c23;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06), 0 0 5px rgba(195, 25, 31, 0.7);
+    outline: none; }
+
+/*  Textarea
+    ========================================================================== */
+textarea {
+  resize: vertical; }
+
+/*  Search
+    ========================================================================== */
+input[type="search"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none; }
+
+/*  Checkbox / Radio
+    ========================================================================== */
+input[type="checkbox"],
+input[type="radio"] {
+  display: inline;
+  margin-right: 0.375rem; }
+
+/*  File Select
+    ========================================================================== */
+input[type="file"] {
+  padding-bottom: 0.75rem;
+  width: 100%; }
+
+/*  Select
+    ========================================================================== */
+select {
+  margin-bottom: 1.5rem;
+  max-width: 100%;
+  width: auto; }
+
+/*  ==========================================================================
+    ==========================================================================
+
+    Tables
+    1. Base Tables
+    2. Responsive Tables
+
+    CSS FORMATTING
+    1. Positioning
+    2. Display & Box Model
+    3. Text
+    4. Other
+
+    ==========================================================================
+    ========================================================================== */
+/*  ========================================================================== 
+    1. Base Tables
+    ========================================================================== */
+/*  Table
+    ========================================================================== */
+table {
+  -ms-font-feature-settings: "kern", "liga", "tnum";
+  font-feature-settings: "kern", "liga", "tnum";
+  border-collapse: collapse;
+  margin: 0.75rem 0;
+  table-layout: fixed;
+  width: 100%; }
+
+/*  Table Header
+    ========================================================================== */
+th {
+  border-bottom: 1px solid #c2c2c2;
+  font-weight: bold;
+  padding: 0.75rem 0;
+  text-align: left; }
+
+/*  Table Data
+    ========================================================================== */
+td {
+  border-bottom: 1px solid #e8e8e8;
+  padding: 0.75rem 0; }
+
+/*  Table Row / Data / Header
+    ========================================================================== */
+tr,
+td,
+th {
+  vertical-align: middle; }
+
+/*  ==========================================================================
+    2. Responsive Tables
+    ========================================================================== */
+/*  Table Header
+    ========================================================================== */
+table th {
+  font-weight: bold; }
+
+/*  Table Data / Header
+    ========================================================================== */
+table td, table th {
+  padding: 9px 10px;
+  text-align: left; }
+
+/*  Breakpoints
+    ========================================================================== */
+@media only screen and (max-width: 767px) {
+  table.responsive {
+    margin-bottom: 0; }
+  .pinned {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #fff;
+    width: 35%;
+    overflow: hidden;
+    overflow-x: scroll;
+    border-right: 1px solid #ccc;
+    border-left: 1px solid #ccc; }
+  .pinned table {
+    border-right: none;
+    border-left: none;
+    width: 100%; }
+  .pinned table th, .pinned table td {
+    white-space: nowrap; }
+  .pinned td:last-child {
+    border-bottom: 0; }
+  div.table-wrapper {
+    position: relative;
+    margin-bottom: 20px;
+    overflow: hidden;
+    border-right: 1px solid #ccc;
+    border-top: 1px solid #ccc; }
+  div.table-wrapper div.scrollable table {
+    margin-left: 35%; }
+  div.table-wrapper div.scrollable {
+    overflow: scroll;
+    overflow-y: hidden; }
+  table.responsive td, table.responsive th {
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden; }
+  table.responsive th:first-child, table.responsive td:first-child, table.responsive td:first-child, table.responsive.pinned td {
+    display: none; } }
+
+/*  ==========================================================================
+    ==========================================================================
+
+    Print
+    1. Standard
+
+    CSS FORMATTING
+    1. Positioning
+    2. Display & Box Model
+    3. Text
+    4. Other
+
+    Print styles.
+    Inlined to avoid the additional HTTP request:
+    http://www.phpied.com/delay-loading-your-print-css/
+
+    ==========================================================================
+    ========================================================================== */
+/*  ========================================================================== 
+    1. Standard
+    ========================================================================== */
+@media print {
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster:
+                                       http://www.sanbeiji.com/archives/953 */
+    box-shadow: none !important;
+    text-shadow: none !important; }
+  a,
+  a:visited {
+    text-decoration: underline; }
+  a[href]:after {
+    content: " (" attr(href) ")"; }
+  abbr[title]:after {
+    content: " (" attr(title) ")"; }
+  /*
+         * Don't show links that are fragment identifiers,
+         * or use the `javascript:` pseudo protocol
+         */
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: ""; }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid; }
+  /*
+         * Printing Tables:
+         * http://css-discuss.incutio.com/wiki/Printing_Tables
+         */
+  thead {
+    display: table-header-group; }
+  tr,
+  img {
+    page-break-inside: avoid; }
+  img {
+    max-width: 100% !important; }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3; }
+  h2,
+  h3 {
+    page-break-after: avoid; } }
+
+/*  ==========================================================================
+    ==========================================================================
+
+    Buttons
+    1. 
+
+    CSS FORMATTING
+    1. Positioning
+    2. Display & Box Model
+    3. Text
+    4. Other
+
+    ==========================================================================
+    ========================================================================== */
+/*  ========================================================================== 
+	1. 
+    ========================================================================== */
+/*  ==========================================================================
+    ==========================================================================
+
+    Carousels
+    1. 
+
+    CSS FORMATTING
+    1. Positioning
+    2. Display & Box Model
+    3. Text
+    4. Other
+
+    ==========================================================================
+    ========================================================================== */
+/*  ========================================================================== 
+	1. 
+    ========================================================================== */
+/*  ==========================================================================
+    ==========================================================================
+
+    Dropdowns
+    1. 
+
+    CSS FORMATTING
+    1. Positioning
+    2. Display & Box Model
+    3. Text
+    4. Other
+
+    ==========================================================================
+    ========================================================================== */
+/*  ========================================================================== 
+	1. 
+    ========================================================================== */
+/*  ==========================================================================
+    ==========================================================================
+
+    Navigation
+    1. Main Nav
+
+    CSS FORMATTING
+    1. Positioning
+    2. Display & Box Model
+    3. Text
+    4. Other
+
+    ==========================================================================
+    ========================================================================== */
+/*  ========================================================================== 
+	1. Main Nav
+    ========================================================================== */
+/*  ==========================================================================
+	5. Layout 
+	========================================================================== */
+/*  ==========================================================================
+    ==========================================================================
+
+    Footer
+    1. 
+
+    CSS FORMATTING
+    1. Positioning
+    2. Display & Box Model
+    3. Text
+    4. Other
+
+    ==========================================================================
+    ========================================================================== */
+/*  ========================================================================== 
+	1. 
+    ========================================================================== */
+/*  ==========================================================================
+    ==========================================================================
+
+    Header
+    1. 
+
+    CSS FORMATTING
+    1. Positioning
+    2. Display & Box Model
+    3. Text
+    4. Other
+
+    ==========================================================================
+    ========================================================================== */
+/*  ========================================================================== 
+	1. 
+    ========================================================================== */
+/*  ==========================================================================
+    ==========================================================================
+
+    Sidebar
+    1. 
+
+    CSS FORMATTING
+    1. Positioning
+    2. Display & Box Model
+    3. Text
+    4. Other
+
+    ==========================================================================
+    ========================================================================== */
+/*  ========================================================================== 
+	1. 
+    ========================================================================== */
+/*  ==========================================================================
+	6. Pages 
+	========================================================================== */
+/*  ==========================================================================
+    ==========================================================================
+
+    Contact
+    1. 
+
+    CSS FORMATTING
+    1. Positioning
+    2. Display & Box Model
+    3. Text
+    4. Other
+
+    ==========================================================================
+    ========================================================================== */
+/*  ========================================================================== 
+	1. 
+    ========================================================================== */
+/*  ==========================================================================
+    ==========================================================================
+
+    Home
+    1. 
+
+    CSS FORMATTING
+    1. Positioning
+    2. Display & Box Model
+    3. Text
+    4. Other
+
+    ==========================================================================
+    ========================================================================== */
+/*  ========================================================================== 
+	1. 
+    ========================================================================== */
+/*  ==========================================================================
+	7. Vendor 
+	========================================================================== */
+/*  ==========================================================================
+	8. Shame 
+	========================================================================== */
+/*  ==========================================================================
+    ==========================================================================
+
+    Shame 
+    1. Custom Styles
+
+    CSS FORMATTING
+    1. Positioning
+    2. Display & Box Model
+    3. Text
+    4. Other
+	
+	Because hacks happen.
+
+	See - http://csswizardry.com/2013/04/shame-css/
+
+	Be very specific about what each piece of code is doing, and
+	how to better fix it later.
+
+	Rules:
+	---------------
+	1. If it’s a hack, it goes in _shame.scss.
+	2. Document all hacks fully:
+	3. What part of the codebase does it relate to?
+	4. Why was this needed?
+	5. How does this fix it?
+	6. How might you fix it properly, given more time?
+	7. Do not blame the developer; if they explained why they had to do it then their reasons are probably (hopefully) valid.
+	8. Try and clean _shame.scss up when you have some down time.
+	   Even better, get tech-debt story in which you can dedicate actual sprint time to it.
+
+	Example:
+	---------------
+	Nav specificity fix.
+
+	Someone used an ID in the header code (`#header a{}`) which trumps the
+	nav selectors (`.site-nav a{}`). Use !important to override it until I
+	have time to refactor the header stuff.
+
+		.site-nav a{
+			color:#BADA55!important;
+		}
+
+    ==========================================================================
+    ========================================================================== */
+/* ==========================================================================
+   Shame custom styles
+   ========================================================================== */
