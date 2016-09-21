@@ -1,30 +1,32 @@
-# gulp-build-system
-This is the gulp build system setup used for the majority of projects.
+# Basis
+This is a basic setup for a project. The setup includes an assets folder structure, gulp build system and bower for managing packages.
 
 ##Installation
 
-To get started with the system you must ensure that you have gulp and jshint installed globally. If not you can install them by calling the following in your terminal:
+To get started you must ensure that you have *gulp*, *bower* and *jshint* installed globally. If not you can install them by calling the following in your terminal:
 
 ```
-npm install -g gulp jshint
+npm install -g gulp jshint bower
 ```
 
-The next step is to clone this repo into your desired project folder. (Note the period after the URL will place the files directly into the cwd without a folder wrapper).
+The next step is to download a tar of the repo for use in your project. Place these files in whatever desired folder you like. Note this command below will place the files into the current directory.
 
 ```
-git clone https://github.com/MurrayCreative/gulp-build-system.git . 
+curl -L https://github.com/MurrayCreative/basis/archive/master.tar.gz | tar zx --strip 1 
 ```
 
-Pulling down the repo will also pull down a readme, license and also the .git file itself. To remove these files just run the following:
+Once the files have been successfully pulled down, run the following to install dependenices:
 
 ```
-rm -rf .git README.md LICENSE
+npm install && bower 
 ```
 
-Once the files have been successfully pulled down, run the follwing to install dependenices:
+###Wordpress
+
+If you want to use this setup with a Wordpress Theme, be sure to remove the index file from the setup. You can do that by calling the following:
 
 ```
-npm install
+rm -rf index.html
 ```
 
 ##File Structure
@@ -47,17 +49,20 @@ This gulp setup is based on the below folder structure.
 	    └── svg-sprites
 gulpfile.js
 package.json
+bower.json
+.bowerrc
+index.html
 ```
 
 ##Customization
 
-The gulpfile contains a series of variables which can be modified to change various aspects of your build. The most important thing to remember to change is the *baseUrl*
+The gulpfile contains a series of variables which can be modified to change various aspects of your build. 
 
 ```
-var baseUrl = '<%= site_url %>'; // Local Development URL for BrowserSync. Change as-needed. e.g http://website:8888
-// var baseDir = './app'; // Browsersync server base directory when not using proxy url above
+var baseUrl = '<%= proxy_url %>'; // Local MAMP Development URL for BrowserSync. Change as-needed. 
+// var baseDir = './'; // Browsersync server base directory when not using proxy url above
 var showScssLint = false; // turn scsslint on or off
-var showJsHint = false; // turn JShint on or off
+var showJsHint = true; // turn JShint on or off
 var spritesPrefix = "icon-";
 
 /*  Style paths
@@ -83,6 +88,22 @@ var svgSRC = 'assets/src/svg-sprites/**';
 
 ```
 
+###To proxy or not to proxy
+
+The setup is designed to allow you to use a proxy. For example, if you have setup the project in something like MAMP and the site actually has a dedicated host name e.g (website:8888), then remember to change is the *baseUrl* with your hostname.
+
+However, if you are not using a hostname and have no need for a proxy. The gulp setup can just be run from your project folder. The *baseDir* can be changed to whatever you require e.g *(./app)*. By default the directory setup is disabled. To enable this, go to the browserSync function and uncomment the line below and comment out the line referencing the *proxy: baseUrl*.
+
+```
+// server: true,
+// server: {
+//  baseDir: baseDir
+// },
+// port: 3000,
+proxy: baseUrl,
+```
+
+
 ##Run 
 
 Once you have made any sort of modifications to the variables. Please ensure you change the name & description in the package.json file.
@@ -92,5 +113,14 @@ Just run the following and you will be good to go!
 gulp
 ```
 
+##Contributing
+
+To contribute to this setup, you can clone the repo using the command below. 
+
+```
+git clone https://github.com/MurrayCreative/basis.git
+```
+
+Please ensure to create a branch (feature, hotfix, bugfix) and when you are finished please submit a pull request for review. Any issues that you notice while using this repo, please submit them through the [issue tracker](https://github.com/MurrayCreative/basis/issues)
 
 
