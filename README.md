@@ -3,7 +3,7 @@ This is a basic setup for a project. The setup includes an assets folder structu
 
 ##Installation
 
-To get started you must ensure that you have *gulp*, *bower* and *jshint* installed globally. If not you can install them by calling the following in your terminal:
+To get started you must ensure that you have **gulp**, **bower** and **jshint** installed globally. If not you can install them by calling the following in your terminal:
 
 ```
 npm install -g gulp jshint bower
@@ -90,9 +90,9 @@ var svgSRC = 'assets/src/svg-sprites/**';
 
 ###To proxy or not to proxy
 
-The setup is designed to allow you to use a proxy. For example, if you have setup the project in something like MAMP and the site actually has a dedicated host name e.g (website:8888), then remember to change is the *baseUrl* with your hostname.
+The setup is designed to allow you to use a proxy. For example, if you have setup the project in something like MAMP and the site actually has a dedicated host name e.g (website:8888), then remember to change is the **baseUrl** with your hostname.
 
-However, if you are not using a hostname and have no need for a proxy. The gulp setup can just be run from your project folder. The *baseDir* can be changed to whatever you require e.g *(./app)*. By default the directory setup is disabled. To enable this, go to the browserSync function and uncomment the line below and comment out the line referencing the *proxy: baseUrl*.
+However, if you are not using a hostname and have no need for a proxy. The gulp setup can just be run from your project folder. The **baseDir** can be changed to whatever you require e.g **(./app)**. By default the directory setup is disabled. To enable this, go to the browserSync function and uncomment the line below and comment out the line referencing the **proxy: baseUrl**.
 
 ```
 // server: true,
