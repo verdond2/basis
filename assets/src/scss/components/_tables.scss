@@ -1,0 +1,129 @@
+/*  ==========================================================================
+    ==========================================================================
+
+    Tables
+    1. Base Tables
+    2. Responsive Tables
+
+    CSS FORMATTING
+    1. Positioning
+    2. Display & Box Model
+    3. Text
+    4. Other
+
+    ==========================================================================
+    ========================================================================== */
+
+/*  ========================================================================== 
+    1. Base Tables
+    ========================================================================== */
+
+/*  Table
+    ========================================================================== */
+
+    table {
+        @include font-feature-settings("kern","liga","tnum");
+        border-collapse: collapse;
+        margin: ($base-spacing / 2) 0;
+        table-layout: fixed;
+        width: 100%;
+    }
+
+/*  Table Header
+    ========================================================================== */
+
+    th {
+        border-bottom: 1px solid darken($base-border-color, 15);
+        font-weight: bold;
+        padding: ($base-spacing / 2) 0;
+        text-align: left;
+    }
+
+/*  Table Data
+    ========================================================================== */
+
+    td {
+        border-bottom: $base-border;
+        padding: ($base-spacing / 2) 0;
+    }
+
+/*  Table Row / Data / Header
+    ========================================================================== */
+
+    tr,
+    td,
+    th {
+        vertical-align: middle;
+    }
+
+/*  ==========================================================================
+    2. Responsive Tables
+    ========================================================================== */
+
+/*  Table Header
+    ========================================================================== */
+
+    table th {
+        font-weight: bold;
+    }
+
+/*  Table Data / Header
+    ========================================================================== */
+
+    table td, table th {
+        padding: 9px 10px;
+        text-align: left;
+    }
+
+/*  Breakpoints
+    ========================================================================== */
+
+    @media only screen and (max-width: 767px) {
+        table.responsive {
+            margin-bottom: 0;
+        }
+        .pinned {
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: #fff;
+            width: 35%;
+            overflow: hidden;
+            overflow-x: scroll;
+            border-right: 1px solid #ccc;
+            border-left: 1px solid #ccc;
+        }
+        .pinned table {
+            border-right: none;
+            border-left: none;
+            width: 100%;
+        }
+        .pinned table th, .pinned table td {
+            white-space: nowrap;
+        }
+        .pinned td:last-child {
+            border-bottom: 0;
+        }
+        div.table-wrapper {
+            position: relative;
+            margin-bottom: 20px;
+            overflow: hidden;
+            border-right: 1px solid #ccc;
+            border-top: 1px solid #ccc;
+        }
+        div.table-wrapper div.scrollable table {
+            margin-left: 35%;
+        }
+        div.table-wrapper div.scrollable {
+            overflow: scroll;
+            overflow-y: hidden;
+        }
+        table.responsive td, table.responsive th {
+            position: relative;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        table.responsive th:first-child, table.responsive td:first-child, table.responsive td:first-child, table.responsive.pinned td {
+            display: none;
+        }
+    }

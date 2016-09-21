@@ -1,0 +1,166 @@
+/*  ==========================================================================
+    ==========================================================================
+
+    Typography
+    1. Font Definitions
+    2. General Fonts
+
+    CSS FORMATTING
+    1. Positioning
+    2. Display & Box Model
+    3. Text
+    4. Other
+
+    ==========================================================================
+    ========================================================================== */
+
+/*  ========================================================================== 
+    1. Font Definitions
+    ========================================================================== */
+
+    @include font-face(open_sansregular, '../fonts/opensans-regular-webfont', 400, normal);
+    @include font-face(open_sansbold, '../fonts/opensans-bold-webfont', 700, normal);
+    @include font-face(open_sansitalic, '../fonts/opensans-italic-webfont', 700, italic);
+    
+    
+/*  Open Sans Regular
+    ========================================================================== */
+
+    .sans-regular {
+        font-family: 'open_sansregular', $fallback-stack;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+/*  Open Sans Italic
+    ========================================================================== */
+
+    .sans-italic {
+        font-family: 'open_sansitalic', $fallback-stack;
+        font-weight: 400;
+        font-style: italic;
+    }
+
+/*  Open Sans Bold
+    ========================================================================== */
+
+    .sans-bold {
+        font-family: 'open_sansbold', $fallback-stack;
+        font-weight: 700;
+        font-style: normal;
+    }
+
+/*  ==========================================================================
+    2. General Fonts 
+    ========================================================================== */
+
+/*  HTML & BODY
+    ========================================================================== */
+
+    html {
+        font-size: $base-font-size;
+    }
+
+    body {
+        @include font-feature-settings("kern","liga","frac", "pnum");
+        -webkit-font-smoothing: antialiased;
+        background-color: $base-background-color;
+        color: $base-font-color;
+        @extend .sans-regular;
+        @include font-size($body-font-size);
+        line-height: $base-line-height; 
+    }
+
+/*  Titles
+    ========================================================================== */
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        //font-family: $header-font-family;
+        line-height: $header-line-height;
+       //margin: 0;
+    }
+        
+    h1 {
+        @include font-size($h1-font-size);
+    }
+
+    h2 {
+        @include font-size($h2-font-size);
+    }
+
+    h3 {
+        @include font-size($h3-font-size);
+    }
+
+    h4 {
+        @include font-size($h4-font-size);
+    }
+
+    h5 {
+        @include font-size($h5-font-size);
+    }
+
+    h6 {
+        @include font-size($h6-font-size);
+    }
+
+    
+/*  Body Copy, Anchors, Quotes etc
+    ========================================================================== */
+
+    p {
+        margin: 0 0 ($base-spacing / 2);
+    }
+
+    a {
+        color: $base-link-color;
+        text-decoration: none;
+
+        &:hover {
+            color: $hover-link-color;
+        }
+
+        &:active, &:focus {
+            color: $hover-link-color;
+            outline: none;
+        }
+    }
+
+    hr {
+        display: block;
+        height: 1px;
+        border: 0;
+        border-top: 1px solid $base-border;
+        margin: $base-spacing 0;
+        padding: 0;
+    }
+
+    blockquote {
+        border-left: 2px solid $base-border-color;
+        color: lighten($base-font-color, 15);
+        margin: $base-spacing 0;
+        padding-left: $base-spacing / 2;
+    }
+
+    cite {
+        color: lighten($base-font-color, 25);
+        font-style: italic;
+
+        &:before {
+        content: "\2014 \00A0";
+        }
+    }
+
+    strong,
+    p.bold {
+        @extend .sans-bold;
+    }
+
+    em {
+        @extend .sans-italic; 
+    }
