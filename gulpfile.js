@@ -5,7 +5,7 @@
 	var baseUrl = '<%= proxy_url %>'; // Local MAMP Development URL for BrowserSync. Change as-needed. 
 	// var baseDir = './app'; // Browsersync server base directory when not using proxy url above
 	var showScssLint = false; // turn scsslint on or off
-	var showJsHint = false; // turn JShint on or off
+	var showJsHint = true; // turn JShint on or off
 	var spritesPrefix = "icon-";
 
 	/*  Style paths
