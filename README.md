@@ -18,7 +18,7 @@ curl -L https://github.com/MurrayCreative/basis/archive/master.tar.gz | tar zx -
 Once the files have been successfully pulled down, run the following to install dependenices:
 
 ```
-npm install && bower 
+npm install && bower install
 ```
 
 ###Wordpress
