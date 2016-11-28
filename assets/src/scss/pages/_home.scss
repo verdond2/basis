@@ -17,3 +17,12 @@
 	1. 
     ========================================================================== */
     
+    .column {
+        @include col(1/2);
+        background-color: red;
+    }
+
+    .col-wrap {
+        @include cf();
+        @include center(600px);
+    }

@@ -1262,6 +1262,32 @@ table td, table th {
 /*  ========================================================================== 
 	1. 
     ========================================================================== */
+.column {
+  float: left;
+  clear: none;
+  width: 48.5%;
+  margin-left: 0;
+  margin-right: 3%;
+  background-color: red; }
+  .column:last-child {
+    margin-right: 0; }
+
+.col-wrap {
+  *zoom: 1;
+  width: auto;
+  max-width: 600px;
+  float: none;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 0;
+  padding-right: 0; }
+  .col-wrap:before, .col-wrap:after {
+    content: '';
+    display: table; }
+  .col-wrap:after {
+    clear: both; }
+
 /*  ==========================================================================
 	7. Vendor 
 	========================================================================== */
