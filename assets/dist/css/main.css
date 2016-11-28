@@ -732,8 +732,7 @@ website:    http://www.burocratik.com
 
     General
     1. Base Styles 
-    2. Browser Upgrade Prompt 
-    3. Images
+    2. Images
 
     CSS FORMATTING
     1. Positioning
@@ -743,11 +742,6 @@ website:    http://www.burocratik.com
 
     ==========================================================================
     ========================================================================== */
-/*
-    * What follows is the result of much research on cross-browser styling.
-    * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
-    * Kroc Camen, and the H5BP dev community and team.
-*/
 /*  ========================================================================== 
     1. Base Styles opinionated defaults 
     ========================================================================== */
@@ -756,6 +750,10 @@ html {
 
 *, *:before, *:after {
   box-sizing: inherit; }
+
+body {
+  background-color: #ffffff;
+  color: #353c40; }
 
 /*
     * Remove text-shadow in selection highlight:
@@ -785,17 +783,28 @@ svg,
 video {
   vertical-align: middle; }
 
-/*  ==========================================================================
-    2. Browser Upgrade Prompt 
-    ========================================================================== */
-.browserupgrade {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0; }
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid 1px solid #e8e8e8;
+  margin: 1.5rem 0;
+  padding: 0; }
+
+blockquote {
+  border-left: 2px solid #e8e8e8;
+  color: #58636a;
+  margin: 1.5rem 0;
+  padding-left: 0.75rem; }
+
+cite {
+  color: #6f7d86;
+  font-style: italic; }
+  cite:before {
+    content: "\2014 \00A0"; }
 
 /*  ==========================================================================
-    3. Images
+    2. Images
     ========================================================================== */
 img,
 picture {
@@ -882,8 +891,6 @@ body {
   -ms-font-feature-settings: "kern", "liga", "frac", "pnum";
   font-feature-settings: "kern", "liga", "frac", "pnum";
   -webkit-font-smoothing: antialiased;
-  background-color: #ffffff;
-  color: #353c40;
   font-size: 14px;
   font-size: 1.4rem;
   line-height: 1.5; }
@@ -922,7 +929,7 @@ h6 {
   font-size: 14px;
   font-size: 1.4rem; }
 
-/*  Body Copy, Anchors, Quotes etc
+/*  Body Copy, Anchors etc
     ========================================================================== */
 p {
   margin: 0 0 0.75rem; }
@@ -935,26 +942,6 @@ a {
   a:active, a:focus {
     color: #961318;
     outline: none; }
-
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid 1px solid #e8e8e8;
-  margin: 1.5rem 0;
-  padding: 0; }
-
-blockquote {
-  border-left: 2px solid #e8e8e8;
-  color: #58636a;
-  margin: 1.5rem 0;
-  padding-left: 0.75rem; }
-
-cite {
-  color: #6f7d86;
-  font-style: italic; }
-  cite:before {
-    content: "\2014 \00A0"; }
 
 /*  ==========================================================================
 	4. Components 
