@@ -32,7 +32,7 @@
 /*  Jeet
 	========================================================================== */
 
-	@import "../bower_components/jeet/scss/jeet/jeet";
+	@import "../bower_components/jeet/scss/jeet/index";
 
 /*  Breakpoint SASS
 	========================================================================== */
@@ -56,7 +56,6 @@
 	@import "helpers/variables";
 	@import "helpers/mixins";
 	@import "helpers/helpers";
-	@import "helpers/functions";
 
 /*  ==========================================================================
 	3. Base 
