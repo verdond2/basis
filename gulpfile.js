@@ -2,8 +2,8 @@
     1. Setup Path Varaibles
     ========================================================================== */
 
-	var baseUrl = '<%= proxy_url %>'; // Local MAMP Development URL for BrowserSync. Change as-needed. 
-	// var baseDir = './'; // Browsersync server base directory when not using proxy url above
+	// var baseUrl = '<%= proxy_url %>'; // Local MAMP Development URL for BrowserSync. Change as-needed. 
+	var baseDir = './'; // Browsersync server base directory when not using proxy url above
 	var showScssLint = false; // turn scsslint on or off
 	var showJsHint = true; // turn JShint on or off
 	var spritesPrefix = "icon-";
@@ -148,12 +148,12 @@
 
 	gulp.task('browserSync', function() {
 	    browserSync.init({
-			// server: true,
-			// server: {
-			// 	baseDir: baseDir
-			// },
+			server: true,
+			server: {
+				baseDir: baseDir
+			},
 			// port: 3000,
-			proxy: baseUrl,
+			// proxy: baseUrl,
 	        notify: {
 	            styles: {
 	                top: 'auto',

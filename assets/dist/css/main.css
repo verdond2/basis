@@ -397,6 +397,139 @@ textarea {
 
 /*  Jeet
 	========================================================================== */
+/*  Syntax Quick Reference
+  --------------------------
+  column($ratios: 1, $offset: 0, $cycle: 0, $uncycle: 0, $gutter: $jeet-gutter)
+  span($ratio: 1, $offset: 0)
+  shift($ratios: 0, $col_or_span: column, $gutter: $jeet-gutter)
+  unshift()
+  edit()
+  center($max_width: 1410px, $pad: 0)
+  stack($pad: 0, $align: false)
+  unstack()
+  align($direction: both)
+  cf()
+*/
+/**
+ * Grid settings.
+ * All values are defaults and can therefore be easily overidden.
+ */
+/**
+ * List functions courtesy of the wonderful folks at Team Sass.
+ * Check out their awesome grid: Singularity.
+ */
+/**
+ * Get  percentage from a given ratio.
+ * @param {number} [$ratio=1] - The column ratio of the element.
+ * @returns {number} - The percentage value.
+ */
+/**
+ * Work out the column widths based on the ratio and gutter sizes.
+ * @param {number} [$ratios=1] - The column ratio of the element.
+ * @param {number} [$gutter=$jeet-gutter] - The gutter for the column.
+ * @returns {list} $width $gutter - A list containing the with and gutter for the element.
+ */
+/**
+ * Get the set layout direction for the project.
+ * @returns {string} $direction - The layout direction.
+ */
+/**
+ * Replace a specified list value with a new value (uses built in set-nth() if available)
+ * @param {list} $list - The list of values you want to alter.
+ * @param {number} $index - The index of the list item you want to replace.
+ * @param {*} $value - The value you want to replace $index with.
+ * @returns {list} $list - The list with the value replaced or removed.
+ * @warn if an invalid index is supplied.
+ */
+/**
+ * Reverse a list (progressively enhanced for Sass 3.3)
+ * @param {list} $list - The list of values you want to reverse.
+ * @returns {list} $result - The reversed list.
+ */
+/**
+ * Get the opposite direction to a given value.
+ * @param {string} $dir - The direction you want the opposite of.
+ * @returns {string} - The opposite direction to $dir.
+ * @warn if an incorrect string is provided.
+ */
+/**
+ * Style an element as a column with a gutter.
+ * @param {number} [$ratios=1] - A width relative to its container as a fraction.
+ * @param {number} [$offset=0] - A offset specified as a fraction (see $ratios).
+ * @param {number} [$cycle=0] - Easily create an nth column grid where $cycle equals the number of columns.
+ * @param {number} [$uncycle=0] - Undo a previous cycle value to allow for a new one.
+ * @param {number} [$gutter=$jeet-gutter] - Specify the gutter width as a percentage of the containers width.
+ */
+/**
+ * An alias for the column mixin.
+ * @param [$args...] - All arguments get passed through to column().
+ */
+/**
+ * Get the width of a column and nothing else.
+ * @param {number} [$ratios=1] - A width relative to its container as a fraction.
+ * @param {number} [$g=$jeet-gutter] - Specify the gutter width as a percentage of the containers width.
+ */
+/**
+ * Get the gutter size of a column and nothing else.
+ * @param {number} [ratios=1] - A width relative to its container as a fraction.
+ * @param {number} [g=jeet.gutter] - Specify the gutter width as a percentage of the containers width.
+ */
+/**
+ * An alias for the column-width function.
+ * @param [$args...] - All arguments get passed through to column().
+ */
+/**
+ * An alias for the column-gutter function.
+ * @param [$args...] - All arguments get passed through to column().
+ */
+/**
+ * Style an element as a column without any gutters for a seamless row.
+ * @param {number} [$ratios=1] - A width relative to its container as a fraction.
+ * @param {number} [$offset=0] - A offset specified as a fraction (see $ratios).
+ * @param {number} [cycle=0] - Easily create an nth column grid where cycle equals the number of columns.
+ * @param {number} [uncycle=0] - Undo a previous cycle value to allow for a new one.
+ */
+/**
+ * Reorder columns without altering the HTML.
+ * @param {number} [$ratios=0] - Specify how far along you want the element to move.
+ * @param {string} [$col-or-span=column] - Specify whether the element has a gutter or not.
+ * @param {number} [$gutter=$jeet-gutter] - Specify the gutter width as a percentage of the containers width.
+ */
+/**
+ * Reset an element that has had shift() applied to it.
+ */
+/**
+ * View the grid and its layers for easy debugging.
+ * @param {string} [$color=black] - The background tint applied.
+ * @param {boolean} [$important=false] - Whether to apply the style as !important.
+ */
+/**
+ *  Alias for edit().
+ */
+/**
+ * Horizontally center an element.
+ * @param {number} [$max-width=1410px] - The max width the element can be.
+ * @param {number} [$pad=0] - Specify the element's left and right padding.
+ */
+/**
+ * Uncenter an element.
+ */
+/**
+ * Stack an element so that nothing is either side of it.
+ * @param {number} [$pad=0] - Specify the element's left and right padding.
+ * @param {boolean/string} [$align=false] - Specify the text align for the element.
+ */
+/**
+ * Unstack an element.
+ */
+/**
+ * Center an element on either or both axes.
+ * @requires A parent container with relative positioning.
+ * @param {string} [$direction=both] - Specify which axes to center the element on.
+ */
+/**
+ * Apply a clearfix to an element.
+ */
 /*  Breakpoint SASS
 	========================================================================== */
 /*  Bourbon
@@ -599,8 +732,7 @@ website:    http://www.burocratik.com
 
     General
     1. Base Styles 
-    2. Browser Upgrade Prompt 
-    3. Images
+    2. Images
 
     CSS FORMATTING
     1. Positioning
@@ -610,11 +742,6 @@ website:    http://www.burocratik.com
 
     ==========================================================================
     ========================================================================== */
-/*
-    * What follows is the result of much research on cross-browser styling.
-    * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
-    * Kroc Camen, and the H5BP dev community and team.
-*/
 /*  ========================================================================== 
     1. Base Styles opinionated defaults 
     ========================================================================== */
@@ -623,6 +750,10 @@ html {
 
 *, *:before, *:after {
   box-sizing: inherit; }
+
+body {
+  background-color: #ffffff;
+  color: #353c40; }
 
 /*
     * Remove text-shadow in selection highlight:
@@ -652,17 +783,28 @@ svg,
 video {
   vertical-align: middle; }
 
-/*  ==========================================================================
-    2. Browser Upgrade Prompt 
-    ========================================================================== */
-.browserupgrade {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0; }
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid 1px solid #e8e8e8;
+  margin: 1.5rem 0;
+  padding: 0; }
+
+blockquote {
+  border-left: 2px solid #e8e8e8;
+  color: #58636a;
+  margin: 1.5rem 0;
+  padding-left: 0.75rem; }
+
+cite {
+  color: #6f7d86;
+  font-style: italic; }
+  cite:before {
+    content: "\2014 \00A0"; }
 
 /*  ==========================================================================
-    3. Images
+    2. Images
     ========================================================================== */
 img,
 picture {
@@ -749,8 +891,6 @@ body {
   -ms-font-feature-settings: "kern", "liga", "frac", "pnum";
   font-feature-settings: "kern", "liga", "frac", "pnum";
   -webkit-font-smoothing: antialiased;
-  background-color: #ffffff;
-  color: #353c40;
   font-size: 14px;
   font-size: 1.4rem;
   line-height: 1.5; }
@@ -789,7 +929,7 @@ h6 {
   font-size: 14px;
   font-size: 1.4rem; }
 
-/*  Body Copy, Anchors, Quotes etc
+/*  Body Copy, Anchors etc
     ========================================================================== */
 p {
   margin: 0 0 0.75rem; }
@@ -802,26 +942,6 @@ a {
   a:active, a:focus {
     color: #961318;
     outline: none; }
-
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid 1px solid #e8e8e8;
-  margin: 1.5rem 0;
-  padding: 0; }
-
-blockquote {
-  border-left: 2px solid #e8e8e8;
-  color: #58636a;
-  margin: 1.5rem 0;
-  padding-left: 0.75rem; }
-
-cite {
-  color: #6f7d86;
-  font-style: italic; }
-  cite:before {
-    content: "\2014 \00A0"; }
 
 /*  ==========================================================================
 	4. Components 
@@ -1194,23 +1314,6 @@ table td, table th {
 /*  ==========================================================================
     ==========================================================================
 
-    Footer
-    1. 
-
-    CSS FORMATTING
-    1. Positioning
-    2. Display & Box Model
-    3. Text
-    4. Other
-
-    ==========================================================================
-    ========================================================================== */
-/*  ========================================================================== 
-	1. 
-    ========================================================================== */
-/*  ==========================================================================
-    ==========================================================================
-
     Header
     1. 
 
@@ -1243,12 +1346,9 @@ table td, table th {
 	1. 
     ========================================================================== */
 /*  ==========================================================================
-	6. Pages 
-	========================================================================== */
-/*  ==========================================================================
     ==========================================================================
 
-    Contact
+    Footer
     1. 
 
     CSS FORMATTING
@@ -1262,6 +1362,9 @@ table td, table th {
 /*  ========================================================================== 
 	1. 
     ========================================================================== */
+/*  ==========================================================================
+	6. Pages 
+	========================================================================== */
 /*  ==========================================================================
     ==========================================================================
 

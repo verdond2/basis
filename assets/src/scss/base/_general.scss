@@ -3,8 +3,7 @@
 
     General
     1. Base Styles 
-    2. Browser Upgrade Prompt 
-    3. Images
+    2. Images
 
     CSS FORMATTING
     1. Positioning
@@ -15,12 +14,6 @@
     ==========================================================================
     ========================================================================== */
 
-/*
-    * What follows is the result of much research on cross-browser styling.
-    * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
-    * Kroc Camen, and the H5BP dev community and team.
-*/
-
 /*  ========================================================================== 
     1. Base Styles opinionated defaults 
     ========================================================================== */
@@ -30,6 +23,11 @@
     }
     *, *:before, *:after {
         box-sizing: inherit;
+    }
+
+    body {
+        background-color: $base-background-color;
+        color: $base-font-color;
     }
 
 /*
@@ -65,19 +63,32 @@
         vertical-align: middle;
     }
     
-/*  ==========================================================================
-    2. Browser Upgrade Prompt 
-    ========================================================================== */
-
-    .browserupgrade {
-        margin: 0.2em 0;
-        background: #ccc;
-        color: #000;
-        padding: 0.2em 0;
+    hr {
+        display: block;
+        height: 1px;
+        border: 0;
+        border-top: 1px solid $base-border;
+        margin: $base-spacing 0;
+        padding: 0;
     }
 
+    blockquote {
+        border-left: 2px solid $base-border-color;
+        color: lighten($base-font-color, 15);
+        margin: $base-spacing 0;
+        padding-left: $base-spacing / 2;
+    }
+
+    cite {
+        color: lighten($base-font-color, 25);
+        font-style: italic;
+
+        &:before {
+            content: "\2014 \00A0";
+        }
+    }
 /*  ==========================================================================
-    3. Images
+    2. Images
     ========================================================================== */
 
     img,
