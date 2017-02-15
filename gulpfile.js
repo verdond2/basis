@@ -36,6 +36,7 @@
 
 	var gulp = require('gulp'),
 		// JS related plugins.
+		babel = require('gulp-babel'),
 		uglify = require('gulp-uglify'),
 		jshint = require('gulp-jshint'),
 		include = require("gulp-include"),
@@ -89,6 +90,7 @@
 			.pipe(include())
 			.pipe(gulpif(showJsHint, jshint()))
 			.pipe(gulpif(showJsHint, jshint.reporter('jshint-stylish')))
+			.pipe(babel())
 			.pipe(uglify())
 			.pipe(rename({ suffix: '.min' }))
 			.pipe(gulp.dest(jsDist))
