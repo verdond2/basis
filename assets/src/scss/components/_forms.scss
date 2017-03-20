@@ -60,7 +60,7 @@
     textarea,
     #{$all-text-inputs},
     select[multiple=multiple] {
-        @include transition(border-color);
+    	transition: border-color 0.2s linear;
         background-color: white;
         border-radius: $form-border-radius;
         border: 1px solid $form-border-color;
@@ -93,7 +93,7 @@
     ========================================================================== */
 
     input[type="search"] {
-        @include appearance(none);
+        -webkit-appearance: none;
     }
 
 /*  Checkbox / Radio
