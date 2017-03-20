@@ -791,18 +791,6 @@ hr {
   margin: 1.5rem 0;
   padding: 0; }
 
-blockquote {
-  border-left: 2px solid #e8e8e8;
-  color: #58636a;
-  margin: 1.5rem 0;
-  padding-left: 0.75rem; }
-
-cite {
-  color: #6f7d86;
-  font-style: italic; }
-  cite:before {
-    content: "\2014 \00A0"; }
-
 /*  ==========================================================================
     2. Images
     ========================================================================== */
@@ -855,7 +843,7 @@ img {
 
 /*  Open Sans Regular
     ========================================================================== */
-.sans-regular, body, input,
+.sans, body, input,
 label,
 select, textarea,
 input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"], input:not([type]),
@@ -942,6 +930,18 @@ a {
   a:active, a:focus {
     color: #961318;
     outline: none; }
+
+blockquote {
+  border-left: 2px solid #e8e8e8;
+  color: #58636a;
+  margin: 1.5rem 0;
+  padding-left: 0.75rem; }
+
+cite {
+  color: #6f7d86;
+  font-style: italic; }
+  cite:before {
+    content: "\2014 \00A0"; }
 
 /*  ==========================================================================
 	4. Components 
