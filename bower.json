@@ -1,14 +1,14 @@
 {
-  "name": "starter-theme",
-  "homepage": "https://github.com/MurrayCreative/starter-theme",
+  "name": "basis",
+  "homepage": "https://github.com/MurrayCreative/basis",
   "authors": [
-    "Dave Verdon <verdond2@gmail.com>"
+    "Dave Verdon <dave.verdon@murraygroup.ie>"
   ],
-  "description": "Starter theme bower dependencies.",
+  "description": "This is a base setup for all projects.",
   "main": "",
   "keywords": [
     "bower",
-    "starter-theme"
+    "basis"
   ],
   "license": "MIT",
   "private": true,
