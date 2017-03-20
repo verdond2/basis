@@ -26,7 +26,7 @@
 /*  Open Sans Regular
     ========================================================================== */
 
-    .sans-regular {
+    .sans {
         font-family: 'open_sansregular', $fallback-stack;
         font-weight: 400;
         font-style: normal;
@@ -64,7 +64,7 @@
     body {
         @include font-feature-settings("kern","liga","frac", "pnum");
         -webkit-font-smoothing: antialiased;
-        @extend .sans-regular;
+        @extend .sans;
         @include font-size($body-font-size);
         line-height: $base-line-height; 
     }
@@ -136,4 +136,20 @@
 
     em {
         @extend .sans-italic; 
+    }
+
+    blockquote {
+        border-left: 2px solid $base-border-color;
+        color: lighten($base-font-color, 15);
+        margin: $base-spacing 0;
+        padding-left: $base-spacing / 2;
+    }
+
+    cite {
+        color: lighten($base-font-color, 25);
+        font-style: italic;
+
+        &:before {
+            content: "\2014 \00A0";
+        }
     }
