@@ -74,10 +74,10 @@
 			.pipe(gulp.dest(styleDist)) // copy *.css into destination
 			.pipe(cleanCSS()) // clean and minify *.css
 			.pipe(rename({ extname: '.min.css' })) // rename *.css to *.min.css
-			.pipe(sourcemaps.write())
+			.pipe(sourcemaps.write('.'))
 			.pipe(gulp.dest(styleDist)) // copy *.min.css to destination
 			.pipe(notify({ title: "Styles Task", message: "Styles compiled successfully.", onLast: true }))
-			.pipe(browserSync.stream());
+			.pipe(browserSync.stream({match: '**/*.css'}));
 	});
 
 /*  ==========================================================================
