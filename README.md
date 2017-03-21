@@ -1,6 +1,5 @@
-[![Alt DevDependencies](https://david-dm.org/MurrayCreative/basis/dev-status.svg)](https://david-dm.org/MurrayCreative/basis/)
 
-# Basis 
+# Basis [![Alt DevDependencies](https://david-dm.org/MurrayCreative/basis/dev-status.svg)](https://david-dm.org/MurrayCreative/basis/) 
 This is a basic setup for a project. The setup includes an assets folder structure, gulp build system and bower for managing packages.
 
 ##Installation
