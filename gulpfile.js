@@ -115,7 +115,8 @@
 	            progessive: false,
 	            interlaced: true
     		}))
-    		.pipe(gulp.dest(imgDist));
+    		.pipe(gulp.dest(imgDist))
+    		.pipe(browserSync.stream({once: true})); // Reload
     });
 
     gulp.task('svgsprites', function () {
@@ -145,7 +146,8 @@
                 }]
 			}))
 	        .pipe(svgstore({ inlineSvg: true }))
-	        .pipe(gulp.dest(imgDist));
+	        .pipe(gulp.dest(imgDist))
+	        .pipe(browserSync.stream({once: true})); // Reload
 	});
 
 /*  ==========================================================================
