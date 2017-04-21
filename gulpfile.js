@@ -123,12 +123,15 @@
 	    	.pipe(plumber({ errorHandler: reportError }))
 	        .pipe(rename({prefix: spritesPrefix}))
 	        .pipe(svgmin({
+	        	plugins: [{
 	                removeDoctype: true
 	            }, {
 	                removeComments: true
 	            }, {
+	            	convertShapeToPath: false
+	            }, {
 	                cleanupNumericValues: {
-	                    floatPrecision: 2
+	                    floatPrecision: 3
 	                }
 	            }, {
 	                convertColors: {
@@ -139,6 +142,7 @@
 	            	cleanupIDs: {
                         minify: true
                     }
+                }]
 			}))
 	        .pipe(svgstore({ inlineSvg: true }))
 	        .pipe(gulp.dest(imgDist));
