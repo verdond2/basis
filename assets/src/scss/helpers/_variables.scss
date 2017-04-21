@@ -140,10 +140,20 @@
 	3. Breakpoints 
 	========================================================================== */
 
-/*  Desktop
+/*  Core
 	========================================================================== */
+ 
+	$break-1200: max-width 1200px;
+	$break-1024: max-width 1024px;
+	$break-768: max-width 768px;
+	$break-700: max-width 700px;
+	$break-600: max-width 600px;
+	$break-568: max-width 568px;
+	$break-480: max-width 480px;
+	$break-375: max-width 375px;
+	$break-320: max-width 320px;
 
-/*  Mobile / Tablet
+/*  Content Aware
 	========================================================================== */
 
 
