@@ -58,7 +58,6 @@
     ========================================================================== */
 
     textarea,
-    #{$all-text-inputs},
     select[multiple=multiple] {
     	transition: border-color 0.2s linear;
         background-color: white;
