@@ -2,7 +2,7 @@
 # Basis [![Alt DevDependencies](https://david-dm.org/MurrayCreative/basis/dev-status.svg)](https://david-dm.org/MurrayCreative/basis/) 
 This is a basic setup for a project. The setup includes an assets folder structure, gulp build system and bower for managing packages.
 
-##Installation
+## Installation
 
 To get started you must ensure that you have **gulp**, **bower** and **jshint** installed globally. If not you can install them by calling the following in your terminal:
 
@@ -22,7 +22,7 @@ Once the files have been successfully pulled down, run the following to install 
 npm install && bower install
 ```
 
-###Wordpress
+### Wordpress
 
 If you want to use this setup with a Wordpress Theme, be sure to remove the index file from the setup. You can do that by calling the following:
 
@@ -30,7 +30,7 @@ If you want to use this setup with a Wordpress Theme, be sure to remove the inde
 rm -rf index.html
 ```
 
-##File Structure
+## File Structure
 
 This gulp setup is based on the below folder structure. 
 
@@ -55,7 +55,7 @@ bower.json
 index.html
 ```
 
-##Customization
+## Customization
 
 The gulpfile contains a series of variables which can be modified to change various aspects of your build. 
 
@@ -89,7 +89,7 @@ var svgSRC = 'assets/src/svg-sprites/**';
 
 ```
 
-###To proxy or not to proxy
+### To proxy or not to proxy
 
 The setup is designed to allow you to use a proxy. For example, if you have setup the project in something like MAMP and the site actually has a dedicated host name e.g (website:8888), then remember to change is the **baseUrl** with your hostname.
 
@@ -105,7 +105,7 @@ proxy: baseUrl,
 ```
 
 
-##Run 
+## Run 
 
 Once you have made any sort of modifications to the variables. Please ensure you change the name & description in the package.json file.
 Just run the following and you will be good to go!
@@ -114,7 +114,7 @@ Just run the following and you will be good to go!
 gulp
 ```
 
-##Contributing
+## Contributing
 
 To contribute to this setup, you can clone the repo using the command below. 
 
