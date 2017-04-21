@@ -87,9 +87,9 @@
 	gulp.task("scripts", function() {
 		return gulp.src(jsSRC)
 			.pipe(plumber({ errorHandler: reportError }))
-			.pipe(include())
 			.pipe(gulpif(showJsHint, jshint()))
 			.pipe(gulpif(showJsHint, jshint.reporter('jshint-stylish')))
+			.pipe(include())
 			.pipe(babel())
 			.pipe(uglify())
 			.pipe(rename({ suffix: '.min' }))
