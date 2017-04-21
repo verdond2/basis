@@ -58,6 +58,7 @@
 		notify = require("gulp-notify"),
 		gutil = require('gulp-util'),
 		cache = require('gulp-cache'),
+		eslint = require('gulp-eslint'),
 		browserSync = require('browser-sync').create();
 
 /*  ==========================================================================
@@ -87,11 +88,13 @@
 	gulp.task("scripts", function() {
 		return gulp.src(jsSRC)
 			.pipe(plumber({ errorHandler: reportError }))
-			.pipe(gulpif(showJsHint, jshint()))
-			.pipe(gulpif(showJsHint, jshint.reporter('jshint-stylish')))
+			// .pipe(gulpif(showJsHint, jshint()))
+			// .pipe(gulpif(showJsHint, jshint.reporter('jshint-stylish')))
+			.pipe(eslint())
+			.pipe(eslint.format())
 			.pipe(include())
-			.pipe(babel())
-			.pipe(uglify())
+			// .pipe(babel())
+			// .pipe(uglify())
 			.pipe(rename({ suffix: '.min' }))
 			.pipe(gulp.dest(jsDist))
 			.pipe(notify({ title: "Scripts Task", message: "Scripts compiled successfully.", onLast: true }));
