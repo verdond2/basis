@@ -5,7 +5,6 @@
 	// var baseUrl = '<%= proxy_url %>'; // Local MAMP Development URL for BrowserSync. Change as-needed. 
 	var baseDir = './'; // Browsersync server base directory when not using proxy url above
 	var showScssLint = false; // turn scsslint on or off
-	var showJsHint = true; // turn JShint on or off
 	var spritesPrefix = "icon-";
 
 	/*  Style paths
@@ -27,7 +26,7 @@
 
 	var imgSRC = 'assets/src/images/**';
 	var imgDist = 'assets/dist/images/';
-	var svgSRC = 'assets/src/svg-sprites/**';
+	var svgSRC = 'assets/src/svg-sprites/*.svg';
 
 
 /*  ==========================================================================
@@ -38,7 +37,6 @@
 		// JS related plugins.
 		babel = require('gulp-babel'),
 		uglify = require('gulp-uglify'),
-		jshint = require('gulp-jshint'),
 		include = require("gulp-include"),
 		// CSS related plugins.
 		sass = require('gulp-sass'),
@@ -58,6 +56,7 @@
 		notify = require("gulp-notify"),
 		gutil = require('gulp-util'),
 		cache = require('gulp-cache'),
+		eslint = require('gulp-eslint'),
 		browserSync = require('browser-sync').create();
 
 /*  ==========================================================================
@@ -87,8 +86,8 @@
 	gulp.task("scripts", function() {
 		return gulp.src(jsSRC)
 			.pipe(plumber({ errorHandler: reportError }))
-			.pipe(gulpif(showJsHint, jshint()))
-			.pipe(gulpif(showJsHint, jshint.reporter('jshint-stylish')))
+			.pipe(eslint())
+			.pipe(eslint.format())
 			.pipe(include())
 			.pipe(babel())
 			.pipe(uglify())
