@@ -26,7 +26,7 @@
 
 	var imgSRC = 'assets/src/images/**';
 	var imgDist = 'assets/dist/images/';
-	var svgSRC = 'assets/src/svg-sprites/**';
+	var svgSRC = 'assets/src/svg-sprites/*.svg';
 
 
 /*  ==========================================================================
