@@ -23,6 +23,4 @@ jQuery(document).ready(function($){
 
 	svg4everybody(); // eslint-disable-line
 
-	// $('.arse').hide();
-
 });
