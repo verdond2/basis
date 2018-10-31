@@ -24,8 +24,8 @@
 	/*  Images and SVG paths
 	    ========================================================================== */
 
-	var imgSRC = 'assets/src/images/**';
-	var imgDist = 'assets/dist/images/';
+	var imgSRC = 'assets/src/img/**';
+	var imgDist = 'assets/dist/img/';
 	var svgSRC = 'assets/src/svg-sprites/*.svg';
 
 
@@ -154,30 +154,6 @@
 	});
 
 /*  ==========================================================================
-   	BrowserSync
-    ========================================================================== */
-
-	gulp.task('browserSync', function() {
-	    browserSync.init({
-			server: true,
-			server: {
-				baseDir: baseDir
-			},
-			// port: 3000,
-			// proxy: baseUrl,
-	        notify: {
-	            styles: {
-	                top: 'auto',
-	                bottom: '0',
-	                borderRadius: '0px',
-	                color: 'black',
-	                backgroundColor: '#fdb814'
-	            }
-	        }
-	    })
-	});
-
-/*  ==========================================================================
     Alerts and Error Reporting
     ========================================================================== */
 
@@ -240,10 +216,34 @@
 	});
 
 
+/*  ==========================================================================
+   	Serve
+    ========================================================================== */
+
+	gulp.task('serve', ['watch', 'styles', 'scripts'], function() {
+	    browserSync.init({
+			server: true,
+			server: {
+				baseDir: baseDir
+			},
+			// port: 3000,
+			// proxy: baseUrl,
+	        notify: {
+	            styles: {
+	                top: 'auto',
+	                bottom: '0',
+	                borderRadius: '0px',
+	                color: 'black',
+	                backgroundColor: '#fdb814'
+	            }
+	        }
+	    })
+	});
+
 /*  Gulp Default Task
     ========================================================================== */
 
 	// just run $ gulp
-	gulp.task('default', ['browserSync', 'watch', 'styles', 'scripts']);
+	gulp.task('default', ['serve']);
 
 
