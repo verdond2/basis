@@ -21,23 +21,12 @@
     ========================================================================== */
 
 /*  ========================================================================== 
-	1. Bower Components
+	1. Node Dependencies
     ========================================================================== */
-
-/*  Normalize
-	========================================================================== */
-
-	@import "../bower_components/normalize-css/normalize";
-
-/*  Jeet
-	========================================================================== */
-
-	@import "../bower_components/jeet/scss/index";
-
-/*  Breakpoint SASS
-	========================================================================== */
-
-	@import "../bower_components/breakpoint-sass/stylesheets/breakpoint";
+	
+	@import "../../../node_modules/normalize.css/normalize";
+	@import "../../../node_modules/jeet/scss/index";
+	@import "../../../node_modules/breakpoint-sass/stylesheets/breakpoint";
 
 /*  ==========================================================================
 	2. Helpers 
