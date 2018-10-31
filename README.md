@@ -1,10 +1,10 @@
 
-# Basis [![Alt DevDependencies](https://david-dm.org/MurrayCreative/basis/dev-status.svg)](https://david-dm.org/MurrayCreative/basis/) 
+# Basis [![Alt DevDependencies](https://david-dm.org/verdond2/basis/dev-status.svg)](https://david-dm.org/verdond2/basis/) 
 This is a basic setup for a project. The setup includes an assets folder structure, gulp build system and bower for managing packages.
 
 ## Installation
 
-To get started you must ensure that you have **gulp**, **bower** and **jshint** installed globally. If not you can install them by calling the following in your terminal:
+To get started you must ensure that you have **gulp** and **jshint** installed globally. If not you can install them by calling the following in your terminal:
 
 ```
 npm install -g gulp jshint bower
@@ -13,21 +13,13 @@ npm install -g gulp jshint bower
 The next step is to download a tar of the repo for use in your project. Place these files in whatever desired folder you like. Note this command below will place the files into the current directory.
 
 ```
-curl -L https://github.com/MurrayCreative/basis/archive/master.tar.gz | tar zx --strip 1 
+curl -L https://github.com/verdond2/basis/archive/master.tar.gz | tar zx --strip 1 
 ```
 
 Once the files have been successfully pulled down, run the following to install dependenices:
 
 ```
-npm install && bower install
-```
-
-### Wordpress
-
-If you want to use this setup with a Wordpress Theme, be sure to remove the index file from the setup. You can do that by calling the following:
-
-```
-rm -rf index.html
+npm install
 ```
 
 ## File Structure
@@ -119,9 +111,9 @@ gulp
 To contribute to this setup, you can clone the repo using the command below. 
 
 ```
-git clone https://github.com/MurrayCreative/basis.git
+git clone https://github.com/verdond2/basis.git
 ```
 
-Please ensure to create a branch (feature, hotfix, bugfix) and when you are finished please submit a pull request for review. Any issues that you notice while using this repo, please submit them through the [issue tracker](https://github.com/MurrayCreative/basis/issues)
+Please ensure to create a branch (feature, hotfix, bugfix) and when you are finished please submit a pull request for review. Any issues that you notice while using this repo, please submit them through the [issue tracker](https://github.com/verdond2/basis/issues)
 
 
