@@ -88,7 +88,11 @@
 			.pipe(plumber({ errorHandler: reportError }))
 			.pipe(eslint())
 			.pipe(eslint.format())
-			.pipe(include())
+			.pipe(include({
+				includePaths: [
+					__dirname + "/node_modules"	
+				]
+			}))
 			.pipe(babel())
 			.pipe(uglify())
 			.pipe(rename({ suffix: '.min' }))
