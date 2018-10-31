@@ -1,7 +1,7 @@
 {
-  "name": "gulp-build-system",
+  "name": "basis",
   "version": "1.0.0",
-  "description": "Gulp Build System",
+  "description": "Basis project boilerplate.",
   "main": "gulpfile.js",
   "dependencies": {
     "breakpoint-sass": "^2.7.1",
