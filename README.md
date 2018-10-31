@@ -7,7 +7,7 @@ This is a basic setup for a project. The setup includes an assets folder structu
 To get started you must ensure that you have **gulp**, **bower** and **jshint** installed globally. If not you can install them by calling the following in your terminal:
 
 ```
-npm install -g gulp jshint bower
+npm install -g gulp jshint
 ```
 
 The next step is to download a tar of the repo for use in your project. Place these files in whatever desired folder you like. Note this command below will place the files into the current directory.
