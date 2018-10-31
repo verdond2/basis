@@ -1,5 +1,5 @@
 
-# Basis [![Alt DevDependencies](https://david-dm.org/verdond2/basis/dev-status.svg)](https://david-dm.org/verdond2/basis/) 
+# Basis [![Alt DevDependencies](https://david-dm.org/verdond2/basis.svg)](https://david-dm.org/verdond2/basis/) 
 This is a basic setup for a project. The setup includes an assets folder structure, gulp build system and bower for managing packages.
 
 ## Installation
