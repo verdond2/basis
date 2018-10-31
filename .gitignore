@@ -7,11 +7,6 @@ Thumbs.db
 .DS_Store
 
 # ignore Editor files
-*.sublime-project
-*.sublime-workspace
-*.komodoproject
-config.codekit
-
 # ignore log files and databases
 *.log
 *.sql
@@ -43,5 +38,6 @@ node_modules/
 # ignore bower dependency directories
 bower_components/
 
-
+# ignore compiled assets directory
+assets/dist/
 
